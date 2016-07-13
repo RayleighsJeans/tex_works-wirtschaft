@@ -6,6 +6,19 @@
 *.fls
 *.out
 *.toc
+.DS*
+*\.DS*
+*/.DS*
+*/**/.DS*
+*\**\.DS*
+
+master_main/backup_template/
+master_main\backup_template\
+
+tmp/*
+*/tmp/*
+tmp\*
+*\tmp\*
 
 *.blg
 */*.blg
