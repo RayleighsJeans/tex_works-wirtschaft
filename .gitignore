@@ -12,16 +12,16 @@
 */**/.DS*
 *\**\.DS*
 
-New_Diss\images\*
-New_Diss/images/*
+New_Diss\images\tmp\*
+New_Diss/images/tmp/*
 
-New_Diss\images\**\*
-New_Diss/images/**/*
+New_Diss\images\tmp\**\*
+New_Diss/images/tmp/**/*
 
 Diss_backup/*
 Diss_backup\*
 
-Diss_backup/**/*
+Diss_backup/*
 Diss_backup\**\*
 
 *.blg
