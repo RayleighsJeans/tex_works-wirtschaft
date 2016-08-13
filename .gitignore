@@ -12,13 +12,17 @@
 */**/.DS*
 *\**\.DS*
 
-master_main/backup_template/
-master_main\backup_template\
+New_Diss\images\*
+New_Diss/images/*
 
-tmp/*
-*/tmp/*
-tmp\*
-*\tmp\*
+New_Diss\images\**\*
+New_Diss/images/**/*
+
+Diss_backup/*
+Diss_backup\*
+
+Diss_backup/**/*
+Diss_backup\**\*
 
 *.blg
 */*.blg
@@ -49,7 +53,7 @@ tmp\*
 *.blg
 *-blx.aux
 *-blx.bib
-#*.brf
+*.brf
 *.run.xml
 
 ## Build tool auxiliary files:
@@ -138,5 +142,3 @@ sympy-plots-for-*.tex/
 #*.bak
 #*.sav
 
-*\**\BiKrischbaum*\*
-BiKrischbaum_Diss*
