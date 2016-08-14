@@ -225,16 +225,16 @@
 \automark[chapter]{chapter}
 \ihead{\headmark}% Inner header
 \ohead[\pagemark]{\pagemark}% Outer header
-\ifoot{}% Inner footer
-\ofoot[]{}% Outer footer
+\ifoot{\headmark}% Inner footer
+\ofoot[\pagemark]{\pagemark}% Outer footer
 }
 \pagestyle{thesisSimple}
 \providepairofpagestyles[thesisSimple]{thesis}{%
-\automark*[section]{}%
+	\automark*[section]{}%
 }
 \providepairofpagestyles[thesisSimple]{review}{%
-	\ofoot[]{}
-	\ifoot[]{}
+	\ofoot[\ttitle/\authorname]{\ttitle/\authorname}
+	\ifoot[\today]{\today}
 }
 \pagestyle{thesis}
 \ifbool{headsepline}{\KOMAoption{headsepline}{true}}{}

@@ -44,9 +44,9 @@ ngerman
 \usepackage{lmodern} %TODO Schriftart
 % Use the Latin Modern font by default
 
-%\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+\usepackage[backend=bibtex8,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
-%\addbibresource{new_diss.bib} % The filename of the bibliography
+\addbibresource{new_diss.bib} % The filename of the bibliography
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
@@ -82,67 +82,52 @@ bottom=1.5cm, % Bottom margin
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
 
 
-%TODO PACKAGES
+%TODO MY PACKAGES
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{units}
+\usepackage{upgreek}
+\usepackage{esint}
+\usepackage{graphicx}
+\usepackage{ziffer}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{csquotes}
+\usepackage{sectsty}
 
-%\usepackage{babel}
-%\usepackage{amsmath,mathtools}
-%\usepackage{amssymb}
-%\usepackage{units}
-%\usepackage{upgreek}
-%\usepackage{esint}
-%\usepackage{graphicx}
-%\usepackage{ziffer}
-%\usepackage{floatrow}
-%\usepackage{wrapfig}
-%\usepackage{subcaption}
-%\usepackage{csquotes}
-%\usepackage{sectsty}
-%\usepackage{acronym}
-%\usepackage{tikz}
-%\usetikzlibrary{arrows,positioning}
-%\usepackage{ulem}
-%\usepackage{psfrag}
-%\usepackage{epsfig}
-%\usepackage{enumerate}
-%\usepackage{pifont}
-%\usepackage{bibentry}
-%\usepackage{pstricks}
-%\usepackage{marvosym}
-%\usepackage{rotating}
-%\usepackage{paralist} 
-%\usepackage{enumitem}
-%\usepackage[percent]{overpic}
-%\usepackage{color}
-%\usepackage{xcolor}
-%\usepackage{longtable}
-%\usepackage{verbatim}
-%\usepackage{longtable}
-%\usepackage{fancybox}
-%\usepackage{paralist}
-
-\usepackage{makeidx} 
-\usepackage[intoc]{nomencl}
-\usepackage[breaklinks=true]{hyperref}
-\usepackage{caption}
-\usepackage{tocbibind}
-\usepackage{subfigure}
+%TODO BIRGITS PACKAGES
 \usepackage{floatrow}
-\usepackage[percent]{overpic}
-\usepackage{color}
-\usepackage[authoryear]{natbib} % hardvard style zitieren
+\usepackage{acronym}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+\usepackage[normalem]{ulem}
+\usepackage{psfrag}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{pifont}
+\usepackage{bibentry}
+\usepackage{pstricks}
+\usepackage{marvosym}
+\usepackage{rotating}
 \usepackage{paralist} 
 \usepackage{enumitem}
-\usepackage{amssymb,xcolor,amsmath}
-\usepackage{tikz}
-\usepackage{fancybox}
-\usetikzlibrary{arrows,positioning}
-\usepackage{acronym}
-\usepackage{ulem}
-\usepackage{psfrag,epsfig,graphicx,subfigure,enumerate,pifont,bibentry,pstricks,marvosym,rotating}
+\usepackage{color}
+\usepackage{xcolor}
 \usepackage{longtable}
 \usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{fancybox}
+\usepackage{paralist}
+\usepackage{makeidx} 
+\usepackage[intoc]{nomencl}
+\usepackage{caption}
+\usepackage[percent]{overpic}
+\usepackage{enumitem}
+\usepackage{amssymb}
 \usepackage[section]{placeins}
-\usepackage[titletoc,title]{appendix}
+
 
 %TODO NEW DEFENITIONS
 
@@ -161,14 +146,12 @@ bottom=1.5cm, % Bottom margin
 \newcommand{\ket}[1]{|#1\rangle}
 \newcommand{\bra}[1]{\langle#1|}
 
-\renewcommand{\harvardand}{und}
-\renewcommand{\betweenauthors}{und}
-
-\usepackage{nomencl}
 \setlength{\nomlabelwidth}{.20\hsize}
 \renewcommand{\nomlabel}[1]{#1 \dotfill}
 
-\date{\today} %TODO SET DATE
+
+%TODO SET DATE
+\date{\today}
 
 
 %DOCUMENT START
@@ -185,7 +168,7 @@ bottom=1.5cm, % Bottom margin
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.3\textwidth]{images/logo.pdf} % University/department logo
+		\includegraphics[width=0.4\textwidth]{images/logo.pdf} % University/department logo
 	\end{figure}
 	
 	\begin{center}
@@ -196,12 +179,12 @@ bottom=1.5cm, % Bottom margin
 		\HRule \\[0.4cm] % Horizontal line
 		{\huge \bfseries \ttitle}\\[0.3cm]
 		{-- Die Wirkung von Außenhandelseffekten auf den technischen Fortschritt --\par}\vspace{0.25cm} % Thesis title
-		\HRule \\[1.5cm] % Horizontal line
+		\HRule \\[1.2cm] % Horizontal line
 				
 		\large \textit{Arbeit zur Erlangung des Grades eines}\\ \degreename\\[0.3cm] %TODO UNIVERSITY TEXT
 		\textit{im}\\[0.4cm]
 		\groupname\\[0.5cm] \deptname\\[0.5cm] %TODO RESEARCH GROUP/DEPARTMENT
-		\facname \\[2.0cm]
+		\facname \\[1.3cm]
 		
 	\end{center}
 	
@@ -299,18 +282,20 @@ bottom=1.5cm, % Bottom margin
 
 \include{appendices/mathematischerAnhang1}
 \include{appendices/mathematischerAnhang2}
+\include{appendices/Variablenverzeichnisp1}
 \include{appendices/variablenverzeichnisp2}
 \include{appendices/Parameterverzeichnis}
-\include{appendices/Variablenverzeichnisp1}
 \include{appendices/Parameterverzeichnis2}
 
 %TODO BIBLIOGRAPHY
 
-%\printbibliography[heading=bibintoc]
 
-\bibliographystyle{dcu}
+\printbibliography[heading=bibintoc]
 
-\bibliography{new_diss.bib}
+
+%\bibliographystyle{dcu}
+%\bibliography{new_diss.bib}
+
 
 %TODO END OF DOCUMENT
 
