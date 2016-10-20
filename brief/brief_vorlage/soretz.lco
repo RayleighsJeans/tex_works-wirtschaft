@@ -1,0 +1,56 @@
+\setkomavar{fromname}{Prof.~Dr.~Susanne Soretz}
+\setkomavar{fromaddress}{17487 Greifswald}
+\setkomavar{fromemail}{soretz@uni-greifswald.de}
+\setkomavar{fromphone}{+49 (0)3834~86-2412}
+\setkomavar{fromfax}{+49 (0)3834~86-2402}
+\setkomavar{fromurl}{http://www.rsf.uni-greifswald/soretz}
+\setkomavar{backaddress}{\fontsize{8}{8}\selectfont
+	Universität Greifswald\usekomavar{backaddressseparator}%
+	RSF\usekomavar{backaddressseparator}
+	\usekomavar{fromname}\usekomavar{backaddressseparator}
+	\usekomavar{fromaddress}}
+\firsthead{\raggedleft\usekomavar{fromlogo}}
+\setkomavar{fromlogo}{\includegraphics{Uni-Siegel}}
+\setkomavar{location}{\raggedright
+  {\noindent\fontsize{13}{13}\selectfont Rechts- und Staats-\\wissenschaftliche Fakultät}\\[8pt]
+  {\noindent\fontsize{10}{10}\selectfont Lehrstuhl für Allgemeine Volks-\\wirtschaftslehre und Wachstum, Strukturwandel und Handel\\
+  Prof. Dr. Susanne Soretz}\\[12pt]
+  \noindent\fontsize{8}{8}\selectfont
+  Telefon:~\usekomavar{fromphone}\\
+  Telefax:~\usekomavar{fromfax}\\
+  soretz@uni-greifswald.de
+}
+
+\@addtoplength{firstheadwidth}{-1mm}
+\@setplength{firstheadvpos}{11mm}
+\@setplength{locwidth}{50mm}
+\@setplength{lochpos}{7.5mm}
+\@setplength{locvpos}{55mm}
+\@setplength{refaftervskip}{10mm}
+\setkomafont{backaddress}{}
+\setkomafont{subject}{\fontspec{UniversLTStd-Cn.otf}}
+\setkomafont{title}{\fontspec{UniversLTStd-Cn.otf}\fontsize{13}{13}\selectfont}
+\setkomavar{date}{\makebox[31mm][l]{\fontsize{9}{9}\selectfont \@date} }
+
+\setkomafont{pagefoot}{\fontsize{8}{8}\selectfont}
+
+\firstfoot{\fontsize{8}{8}\selectfont
+\begin{minipage}[t]{63.7mm}
+Ernst-Moritz-Arndt-Universität Greifswald\\
+Rechts- und Staatswissenschaftliche Fakultät\\
+Wirtschaftswissenschaften\\
+\usekomavar{fromurl}
+\end{minipage}
+\begin{minipage}[t]{51.1mm}
+Friedrich-Loeffler-Straße~70, R~220\\
+Hausanschrift: 17487 Greifswald\\
+Postanschrift: \usekomavar{fromaddress}
+\end{minipage}
+\begin{minipage}[t]{50mm}
+Sekretariat\\
+Madeleine Lenz Tel: +49 (0)3834~86-2452\\
+mlenz@uni-greifswald.de
+\end{minipage}
+}
+
+%.3\useplength{firstfootwidth}}

@@ -1,0 +1,158 @@
+\documentclass[%
+	fromlogo, % Logo
+	fromalign=left, % Position der Absenderadresse
+	fromrule=no, % Trennlinie nach Absenderadresse
+	addrfield=on, % Anschriftfeld
+	fontsize=12pt, % Schriftgr\"o\ss{}e
+	numericaldate=true,
+    backaddress=on,% R\"uckaddresse, Fensterbrief
+	%backaddress=plain,
+	locfield=narrow, % Ausdehnung der Abesendererg\"anzung
+	subject=beforeopening,
+	foldmarks=on,
+	version=last,
+	subject=titled
+	]{scrlttr2}
+
+\LoadLetterOption{DIN} % Einstellungen f\"ur DIN 676 laden
+
+\usepackage{ifxetex}
+
+\ifxetex % Wenn XeLaTeX benutzt wird
+
+  \usepackage{fontspec}
+  \usepackage{polyglossia}
+  \setmainlanguage{german}
+  \usepackage{unicode-math}
+  \usepackage{xltxtra}
+
+  % Schriftart Univers (wahlweise auch Arial)
+  \defaultfontfeatures{Mapping=tex-text}
+  %\setmainfont{arial.ttf}
+  \setmainfont{UniversLTStd-Cn.otf} 
+  \defaultfontfeatures{Ligatures=TeX}
+
+\else % Andere Compiler
+
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[german]{babel}
+  \usepackage{amsfonts,amssymb}
+  \usepackage{universalis}
+
+\fi
+
+\usepackage{scrpage2}
+\usepackage{epsfig}
+\usepackage{amsmath}
+
+% ####################################################
+% TODO: Schreibe KOMA-Variablen f\"ur Briefinformationen
+
+
+%% ABSENDERINFORMATIONEN
+\setkomavar{title}{Titel}
+\setkomavar{place}{17487 Greifswald}
+\setkomavar{date}{\today} % Datum
+
+\setkomavar{fromname}{Prof. Dr. Susanne Soretz} % Absendername
+\setkomavar{fromaddress}{17487 Greifswald} % Abesenderadresse
+\setkomavar{fromemail}{soretz@uni-greifswald.de} % Absenderemail
+\setkomavar{fromphone}{+49 (0)3834~86-2412} % Abesendertelefonnummer
+\setkomavar{fromfax}{+49 (0)3834~86-2402} % Abesenderfaxnummer
+\setkomavar{fromurl}{http://www.rsf.uni-greifswald/soretz} % Absenderwebsite
+
+\setkomavar{fromlogo}{\includegraphics{Uni-Siegel.eps}}
+
+\setkomavar{backaddress}{%
+	\fontsize{8}{8}\selectfont % R\"ucksendeadresse
+	Universit\"at Greifswald\usekomavar{backaddressseparator}%
+	RSF\usekomavar{backaddressseparator}
+	\usekomavar{fromname}\usekomavar{backaddressseparator}
+	\usekomavar{fromaddress}
+	}
+
+\firsthead{%
+	\raggedleft\usekomavar{fromlogo} % Absenderlogo
+	}
+
+\setkomavar{location}{%
+	\raggedright
+	{\noindent\fontsize{13}{13}\selectfont Rechts- und Staats-\\wissenschaftliche Fakult\"at}\\[8pt]
+	{\noindent\fontsize{10}{10}\selectfont Lehrstuhl f\"ur Allgemeine Volks-\\wirtschaftslehre und Wachstum, Strukturwandel und Handel\\
+	Prof. Dr. Susanne Soretz}\\[12pt]
+	\noindent\fontsize{8}{8}\selectfont
+	Telefon:\usekomavar{fromphone}\\
+	Telefax:\usekomavar{fromfax}\\
+	soretz@uni-greifswald.de
+	}
+
+\firstfoot{\fontsize{8}{8}\selectfont % Passe erste Fu\ss{}zeile an
+	\begin{minipage}[t]{63.7mm}
+		Ernst-Moritz-Arndt-Universität Greifswald\\
+		Rechts- und Staatswissenschaftliche Fakultät\\
+		Wirtschaftswissenschaften\\
+		\usekomavar{fromurl}
+	\end{minipage}
+	\begin{minipage}[t]{50mm}
+		Friedrich-Loeffler-Straße~70, R~220\\
+		Hausanschrift: 17487 Greifswald\\
+		Postanschrift: \usekomavar{fromaddress}
+	\end{minipage}
+	\begin{minipage}[t]{50mm}
+		\underline{Sekretariat}\\
+		Madeleine Lenz Tel: +49 (0)3834~86-2452\\
+		mlenz@uni-greifswald.de
+	\end{minipage}
+	}
+
+%% EMPF�NGERINFORMATIONEN
+
+\setkomavar{toname}{Muster Empf\"anger}
+\setkomavar{tocity}{Empf\"anger-Stadt}
+\setkomavar{tostreet}{Reciever-Stra\ss{}e}
+\setkomavar{topostalcode}{12345}
+
+% Gesch\"aftsinformationen
+\setkomavar{yourref}{100001}
+\setkomavar{invoice}{98765}
+\setkomavar{yourmail}{12.34.5678}
+\setkomavar{myref}{PP.KK.LOL}
+\setkomavar{customer}{102938}
+
+% Signatur
+%\setkomavar{signature}{%
+%	\epsfig{signature.eps}\\
+%	\usekomavar{fromname}
+%	{\scriptsize(Position)}
+%	}
+%
+
+% Ende KOMA-Variablen
+% ####################################################
+
+% ####################################################
+% Begin Dokument/Brief
+
+\begin{document}
+
+	\begin{letter}{Empf\"anger}
+
+		\setkomavar{subject}{Test-Subjekt}
+
+		\opening{Meine sehr geehrten Damen und Herren,}
+
+			Dies ist ein Test-Text.
+
+		\closing{Mit freundlichen Gr\"u\ss{}en,}
+		
+		\cc{CC}
+
+		\encl{Angeh\"angt.}
+
+	\end{letter}
+
+\end{document}
+
+% Ende Dokument/Brief
+% ####################################################
