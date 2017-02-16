@@ -1,0 +1,146 @@
+%%
+%% This is file `metropol.drv',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% metropol.dtx  (with options: `driver')
+%% 
+%% Diese Datei wurde aus dem Makropaket metropol.dtx erzeugt. Sie ist Teil
+%% des Makropaketes fuer Autorinnen und Autoren des Metropolis-Verlages.
+%% 
+%% Copyright 1998-2004 Metropolis-Verlag, Marburg
+%% Alle Rechte vorbehalten
+%% 
+%% Metropolis-Verlag
+%% Bahnhofstr. 16a
+%% 35037 Marburg/Lahn
+%% 
+%% Tel: 06421/67377    Fax: 06421/681918
+%% 
+%% http://www.metropolis-verlag.de
+%% 
+%% LaTeX-Support fuer Autorinnen und Autoren des Metropolis-Verlages:
+%% Soenke Schippmann, tjosso.net, Bremen
+%% E-Mail: schippmann@tjosso.net
+%% Tel.: 0421/52079433
+%% 
+%% Diese Datei gehoert nicht zum LaTeX-Standard-Paket. Fehlerbeschrei-
+%% bungen, Probleme bei der Verwendung etc. erbitten wir an unsere oben
+%% genannte Adresse.
+%% 
+%% In dieser Datei werden Teile der Datei classes.dtx des LaTeX2e-Stan-
+%% dard-Pakets verwendet. Die Datei classes.dtx wurde vom LaTeX3-Projekt
+%% (Leslie Lamport, Johannes Braams, David Carlisle, Alan Jeffrey, Frank
+%% Mittelbach, Chris Rowley und Rainer Schoepf) erstellt. Das LaTeX2e-
+%% Makropaket mit der Originalversion der Datei classes.dtx wird
+%% AutorInnen des Metropolis-Verlages auf Anfrage kostenlos vom Metro-
+%% polis-Verlag bereitgestellt.
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+\ProvidesFile{metropol.drv}
+              [2004/05/10 v2.0
+]
+\documentclass[a4paper]{ltxdoc}
+\frenchspacing\pagestyle{headings}
+
+\DoNotIndex{\',\.,\@M,\@@input,\@Alph,\@alph,\@addtoreset,\@arabic}
+\DoNotIndex{\@badmath,\@centercr,\@cite}
+\DoNotIndex{\@dotsep,\@empty,\@float,\@gobble,\@gobbletwo,\@ignoretrue}
+\DoNotIndex{\@input,\@ixpt,\@m,\@minus,\@mkboth}
+\DoNotIndex{\@ne,\@nil,\@nomath,\@plus,\roman,\@set@topoint}
+\DoNotIndex{\@tempboxa,\@tempcnta,\@tempdima,\@tempdimb}
+\DoNotIndex{\@tempswafalse,\@tempswatrue,\@viipt,\@viiipt,\@vipt}
+\DoNotIndex{\@vpt,\@warning,\@xiipt,\@xipt,\@xivpt,\@xpt,\@xviipt}
+\DoNotIndex{\@xxpt,\@xxvpt,\\,\ ,\addpenalty,\addtolength,\addvspace}
+\DoNotIndex{\advance,\ast,\begin,\begingroup,\bfseries,\bgroup,\box}
+\DoNotIndex{\bullet,\,,\",}
+\DoNotIndex{\cdot,\cite,\CodelineIndex,\cr,\day,\DeclareOption}
+\DoNotIndex{\def,\edef,\gdef,\DisableCrossrefs,\divide,\DocInput,\documentclass}
+\DoNotIndex{\DoNotIndex,\egroup,\ifdim,\else,\fi,\em,\endtrivlist}
+\DoNotIndex{\EnableCrossrefs,\end,\end@dblfloat,\end@float,\endgroup}
+\DoNotIndex{\endlist,\everycr,\everypar,\ExecuteOptions,\expandafter}
+\DoNotIndex{\fbox}
+\DoNotIndex{\filedate,\filename,\fileversion,\fontsize,\framebox,\gdef}
+\DoNotIndex{\global,\halign,\hangindent,\hbox,\hfil,\hfill,\hrule}
+\DoNotIndex{\hsize,\hskip,\hspace,\hss,\if@tempswa,\ifcase,\or,\fi,\fi}
+\DoNotIndex{\ifhmode,\ifvmode,\ifnum,\iftrue,\ifx,\fi,\fi,\fi,\fi,\fi}
+\DoNotIndex{\input}
+\DoNotIndex{\jobname,\kern,\leavevmode,\let,\leftmark}
+\DoNotIndex{\list,\llap,\long,\m@ne,\m@th,\mark,\markboth,\markright}
+\DoNotIndex{\month,\newcommand,\newcounter,\newenvironment}
+\DoNotIndex{\NeedsTeXFormat,\newdimen}
+\DoNotIndex{\newlength,\newpage,\nobreak,\noindent,\null,\number}
+\DoNotIndex{\numberline,\OldMakeindex,\OnlyDescription,\p@}
+\DoNotIndex{\pagestyle,\par,\paragraphmark,\parfillskip}
+\DoNotIndex{\penalty,\PrintChanges,\PrintIndex,\ProcessOptions}
+\DoNotIndex{\protect,\ProvidesClass,\raggedbottom,\raggedright}
+\DoNotIndex{\refstepcounter,\relax,\renewcommand}
+\DoNotIndex{\rightmargin,\rightmark,\rightskip,\rlap,\rmfamily}
+\DoNotIndex{\secdef,\selectfont,\setbox,\setcounter,\setlength}
+\DoNotIndex{\settowidth,\sfcode,\skip,\sloppy,\slshape,\space}
+\DoNotIndex{\symbol,\the,\trivlist,\typeout,\tw@,\undefined,\uppercase}
+\DoNotIndex{\usecounter,\usefont,\usepackage,\vfil,\vfill,\viiipt}
+\DoNotIndex{\viipt,\vipt,\vskip,\vspace}
+\DoNotIndex{\wd,\xiipt,\year,\z@}
+\RecordChanges
+  %
+  % Mit den folgenden Zeilen k\"onnen Sie das Aussehen der Dokumentation beeinflussen. Entfernen
+  % Sie einfach die Prozentzeichen vor dem entsprechenden Befehl
+  %
+  \EnableCrossrefs
+  %\DisableCrossrefs  %Falls Sie DisableCrossrefs statt EnableCrossrefs aktivieren, wird
+  %                   % kein Index erstellt.
+  %
+  \CodelineIndex      % Im Index der Makrodefinitionen werden die Zeilennummern der Datei angegeben.
+  %
+\setcounter{GlossaryColumns}{2}
+\GetFileInfo{metropol.dtx}
+\newcommand*{\Lopt}[1]{\textsf {#1}}
+\newcommand*{\file}[1]{\texttt {#1}}
+\newcommand*{\Lcount}[1]{\textsl {\small#1}}
+\newcommand*{\pstyle}[1]{\textsl {#1}}
+\newcommand{\bs}{\texttt{\symbol{92}}}
+\begin{document}
+\setlength\hfuzz{10pt}
+\tolerance=1000
+\setlength{\emergencystretch}{50pt}
+\DocInput{metropol.dtx}
+
+\clearpage
+\PrintChanges
+\clearpage
+\PrintIndex
+\let\PrintChanges\relax
+\let\PrintIndex\relax
+
+\typeout{%
+  ^^J%
+  *******************************************************^^J%
+  Um den Index und das Aenderungsverzeichnis zu erstellen^^J%
+  sind zwei makeindex Aufrufe noetig:^^J%
+  makeindex -s gglo.ist -o metropol.gls metropol.glo^^J%
+  makeindex -s gind.ist metropol.idx^^J%
+  *******************************************************^^J}
+
+\end{document}
+
+
+
+
+\endinput
+%%
+%% End of file `metropol.drv'.

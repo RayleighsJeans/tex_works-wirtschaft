@@ -1,0 +1,32 @@
+% mharvard.sty
+%
+% zusammengehackte Anpassung des harvard.sty fuer den Metropolis-Verlag
+%
+% Soenke Schippmann, September 2000
+%
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mharvard}
+\RequirePackage{harvard}
+
+\newlength{\bibhang}
+\setlength{\bibhang}{1cm}
+
+\@ifundefined{chapter}{\def\thebibliography#1{\section*{\refname}
+  \addcontentsline{toc}{section}{\refname}\sectionmark{\refname}%
+  \list{\relax}{\setlength{\labelsep}{\z@}\setlength{\labelwidth}{\z@}%
+        \setlength{\itemindent}{-\bibhang}
+        \setlength{\leftmargin}{\bibhang}
+        \setlength{\itemsep}{3pt plus1pt minus0pt}}
+    \def\newblock{\relax}
+    \sloppy\litsize\relax}}%
+{\def\thebibliography#1{\chapter*{\bibname}\markright{\bibname}%
+ \addcontentsline{toc}{chapter}{\bibname}\chaptermark{\bibname}%
+  \list{\relax}{\setlength{\labelsep}{\z@}\setlength{\labelwidth}{\z@}%
+        \setlength{\itemindent}{-\bibhang}
+        \setlength{\leftmargin}{\bibhang}
+        \setlength{\itemsep}{3pt plus1pt minus0pt}}
+    \def\newblock{\relax}
+    \sloppy\litsize\relax}}
+

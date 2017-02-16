@@ -12,18 +12,30 @@
 */**/.DS*
 *\**\.DS*
 
-New_Diss\images\tmp\*
-New_Diss/images/tmp/*
+## MAGIC FOLDERS
+dissmy/images/
+dissmy\images\
+dissmy\images\tmp\*
+dissmy/images/tmp/*
+dissmy\images\tmp\**\*
+dissmy/images/tmp/**/*
+dissbak/*
+dissbak\*
+dissbak/*
+dissbak\**\*
 
-New_Diss\images\tmp\**\*
-New_Diss/images/tmp/**/*
+publication/Rose_Druckfassung.pdf.pdf
+publication\Rose_Druckfassung.pdf.pdf
+# publication/Diss_Kirschbaum.pdf
+# publication\Diss_Kirschbaum.pdf
+publication/metropolis/*
+publication\metropolis\*
+publication/dissertation/figures/*
+publication\dissertation\figures\*
+publication/dissertation/figures/**/*
+publication\dissertation\figures\**\*
 
-Diss_backup/*
-Diss_backup\*
-
-Diss_backup/*
-Diss_backup\**\*
-
+## TEX FILES
 *.blg
 */*.blg
 *.bbl

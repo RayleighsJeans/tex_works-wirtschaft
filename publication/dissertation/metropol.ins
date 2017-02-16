@@ -1,0 +1,78 @@
+\def\batchfile{metropol.ins}
+\input docstrip.tex
+\preamble
+
+Diese Datei wurde aus dem Makropaket metropol.dtx erzeugt. Sie ist Teil
+des Makropaketes fuer Autorinnen und Autoren des Metropolis-Verlages.
+
+Copyright 1998-2004 Metropolis-Verlag, Marburg
+Alle Rechte vorbehalten
+
+Metropolis-Verlag
+Bahnhofstr. 16a
+35037 Marburg/Lahn
+
+Tel: 06421/67377    Fax: 06421/681918
+
+http://www.metropolis-verlag.de
+
+LaTeX-Support fuer Autorinnen und Autoren des Metropolis-Verlages: 
+Soenke Schippmann, tjosso.net, Bremen
+E-Mail: schippmann@tjosso.net
+Tel.: 0421/52079433
+
+Diese Datei gehoert nicht zum LaTeX-Standard-Paket. Fehlerbeschrei-
+bungen, Probleme bei der Verwendung etc. erbitten wir an unsere oben 
+genannte Adresse. 
+
+In dieser Datei werden Teile der Datei classes.dtx des LaTeX2e-Stan-
+dard-Pakets verwendet. Die Datei classes.dtx wurde vom LaTeX3-Projekt 
+(Leslie Lamport, Johannes Braams, David Carlisle, Alan Jeffrey, Frank 
+Mittelbach, Chris Rowley und Rainer Schoepf) erstellt. Das LaTeX2e-
+Makropaket mit der Originalversion der Datei classes.dtx wird 
+AutorInnen des Metropolis-Verlages auf Anfrage kostenlos vom Metro-
+polis-Verlag bereitgestellt.
+\endpreamble
+\keepsilent
+
+\Msg{*** Erstelle Dateien ***}
+\generate{%
+   \file{metropol.drv}{%
+          \from{metropol.dtx}{driver}}
+   \file{metroart.cls}{%
+          \from{metropol.dtx}{metroart}}
+   \file{metrobk.cls}{%
+          \from{metropol.dtx}{metrobk}}
+   \file{metrojog.cls}{%
+          \from{metropol.dtx}{metrojog}}
+   \file{mta12.clo}{%
+          \from{metropol.dtx}{art,12ptg}}
+   \file{mtbk12.clo}{%
+          \from{metropol.dtx}{bk,12ptg}}
+   \file{mtj12.clo}{%
+          \from{metropol.dtx}{jog,12ptg}}
+   \file{mta12t.clo}{%
+          \from{metropol.dtx}{art,12ptt}}
+   \file{mtbk12t.clo}{%
+          \from{metropol.dtx}{bk,12ptt}}
+   \file{mtj12t.clo}{%
+          \from{metropol.dtx}{jog,12ptt}}
+	}
+\Msg{}
+\Msg{******************************************************************}
+\Msg{*                                                                *}
+\Msg{*     Verschieben Sie bitte die Dateien                          *}
+\Msg{*          metroart.cls, metrobk.cls, mta12.clo,                 *}
+\Msg{*          mtbk12.clo, mta12t.clo und mtbk12t.clo                *}
+\Msg{*     in das Verzeichnis, in dem TeX Eingabedateien erwartet     *}
+\Msg{*     (z.B. c:/emtex/texinput oder ~/.tex/ oder aehnlich)        *}
+\Msg{*                                                                *}
+\Msg{******************************************************************}
+\Msg{}
+
+\endinput
+
+
+
+
+

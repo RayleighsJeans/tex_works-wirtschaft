@@ -1,0 +1,810 @@
+\documentclass[12pt]{metroart}
+
+\usepackage[latin1]{inputenc}
+
+%Zuerst ein paar Einstellungen vornehmen:
+%Folgende Zeile aktiviert T1-Codierung (mit Postscript- oder
+%ec/dc-Schriften)
+\usepackage[T1]{fontenc}
+
+%Zur Verwendung von Postscriptschriften:
+%\usepackage{bstgaramo}
+%\usepackage{courierv}
+%\usepackage{mathbeg}
+
+\usepackage[dvips]{epsfig}
+\usepackage{shortvrb}
+\usepackage{array}
+
+\usepackage{german}
+
+% Alternativ können Sie babel verwenden:
+%\usepackage[german,english]{babel}
+
+\usepackage{apametro}
+
+%Ein paar Makros:
+\MakeShortVerb{\|}
+\newcommand*{\Lenv}[1]{{\normalfont\textbf{[#1]}}}
+\newcommand*{\Lbef}[1]{\Lenv{\symbol{92}#1}}
+\newcommand{\bs}{\symbol{92}}
+
+%Einige häufige Trennfehler (bzw. unschöne Trennungen):
+
+\hyphenation{eine einer eines weder wegen hatte alle aller lege legen
+quote Ihres Ihren Ihrem Ihre Times Wachs-tum Wachs-tums-rate
+Wachs-tums-raten Wirt-schafts-wachs-tum Wirt-schafts-wachs-tums
+docu-ment-class metro-art metro-bk Post-script Post-script-schrift
+Post-script-schrif-ten Dateien Klas-sen-dateien Mo-no-gra-phien 
+Sei-ten-um-bruch Sei-ten-um-brü-che}
+
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+\title[Metropolis Klassen-Dateien für \LaTeXe]{% 
+Metropolis Klassen-Dateien\\für \LaTeXe\ \Lbef{title}%
+\thanks{Die Klassendateien basieren auf den \LaTeXe"=Klassen
+\emph{book} und \emph{article} von Leslie Lamport, Frank Mittelbach
+und Johannes Braams. Dieser Text beschreibt die Metropolis-Klassen in
+der Version 1.2 vom März 2000. \Lbef{thanks}}}
+
+\subtitle[Layout- und Verwendungshinweise für Autorinnen und
+Autoren]{Layout- und Verwendungshinweise\\für Autorinnen und Autoren
+\Lbef{subtitle}}
+
+\author[Hubert Hoffmann und Sönke Schippmann]{% 
+Hubert Hoffmann und Sönke Schippmann \Lbef{author}%
+\thanks{Metropolis-Verlag, Bahnhofstraße 16a, 35037 Marburg, Tel.:
+0\,64\,21/""6\,73\,77. \LaTeX-Support: Sönke Schippmann, Tel.:
+0\,64\,21/""20\,05\,80, email: schippmann@metropolis-verlag.de\,.}}
+
+\maketitle
+
+\begin{abstract}
+Für die Verwendung mit \LaTeXe{} stellen wir zwei Klassendateien
+bereit: \emph{metroart} für Sammelwerke und \emph{metrobk} für
+Monographien. Beide orientieren sich eng an den Standardklassen
+\emph{article} bzw. \emph{book} -- Sie können die Standardklassen mit
+nur wenigen Anpassungen durch die Metropolis"=Klassen ersetzen. Dieser
+Text beschreibt, worauf Sie beim Layout achten sollten und wie Sie die
+Klassen"=Dateien verwenden. Zugleich stellt er ein Beispiel für das
+Layout dar -- er wurde mit der Klasse \emph{metroart} bearbeitet.
+
+Die \LaTeX{}-Datei zu diesem Text sollten Sie ebenfalls erhalten haben
+(metrotex.tex). Beim Lesen dieses Textes können Sie einen Blick in die
+Datei werfen, um nachzuvollziehen, wie die angesprochenen Befehle
+verwendet werden. 
+
+Wir sind uns übrigens bewußt, daß dieser Text \emph{kein} Beispiel für
+gelungenes Layout ist. Er soll vielmehr möglichst zahlreiche Beispiele
+für die Verwendung der Metropolis-Klassen aufzeigen. Sie sollten sich
+dagegen stärker beschränken, und z.\,B. Aufzählungen nur numeriert
+\emph{oder} mit Spiegelstrichen verwenden. Wir verwenden Fettdruck, um
+einige wichtige Aussagen trotz des chaotischen Layouts hervorzuheben.
+Ihnen empfehlen wir dagegen kursiv, bei gut layouteten Texten reicht
+dies als Hervorhebung völlig aus. Außerdem ist der Zeilen- und
+Seitenumbruch nicht gerade sauber -- um die Lesbarkeit der .tex-Datei
+zu erhalten haben wir auf manuelle Trenn- und Umbruchbefehle
+weitgehend verzichtet. 
+
+Dieser Abschnitt wurde mit der Umgebung \Lenv{abstract} gesetzt. Im
+folgenden wird der jeweils benutzte Befehls- oder Umgebungsname bei
+der ersten Verwendung in eckigen Klammern [] angegeben, Befehlsnamen
+erkennen Sie daran, daß sie mit einem~\bs{} beginnen, Umgebungsnamen
+(zur Verwendung mit \bs{}begin\{Umgebung\} bzw. \bs{}end\{Umgebung\})
+haben keinen \bs. 
+\end{abstract}
+
+\section{Verwendung der Metropolis-Klassen \Lbef{section}}
+
+Die Metropolis"=Klassendateien \emph{metroart} und \emph{metrobk} sind
+als Ersatz der \LaTeXe"=Klassen \emph{article} und \emph{book}
+gedacht. Für \LaTeX"=2.09 stellen wir keine Makros bereit --
+\LaTeX"=2.09 wird nicht mehr weiterentwickelt und ist nur mit sehr
+großem Aufwand an unsere Bedürfnisse anzupassen. Falls Sie \LaTeXe{}
+installieren möchten, können Sie vom Verlag die entsprechenden Dateien
+bekommen, bitte fragen Sie bei uns nach. Falls Sie Zugang zum Internet
+haben, finden Sie \LaTeXe{} z.\,B. auf dem FTP"=Server ftp.dante.de.
+
+Die Metropolis"=Klassen werden wie üblich mit dem Befehl
+\bs{}documentclass in Ihre Datei eingebunden:
+\bs{}documentclass\{metroart\}
+
+Folgende Optionen können Sie angeben (in eckigen Klammern [] hinter
+\bs{}documentclass):
+
+\begin{description}
+\item[normal:] Satzspiegel für Normalformat (Satzspiegel 12.5\,cm x
+22\,cm,
+Buchformat 13.5\,cm x 20.8\,cm, Verkleinerung vor dem Druck 84\,\%),
+Voreinstellung.
+
+\item[gross:] Satzspiegel für Großformat, bitte nur dann verwenden,
+wenn die Verwendung des großen Buchformates mit dem Verlag abgestimmt
+wurde (Satzspiegel 13.2\,cm x 23.1\,cm, Buch"-format 14.8\,cm x
+22.5\,cm, Verkleinerung vor dem Druck 84\,\%).
+
+\item[12pt:] Verwendet im Gegensatz zum Standard"=\LaTeX{} \glq
+glatte\grq{} Schriftgrößen (14pt statt 14.4pt). Kann nur mit
+Postscript"=Schriften verwendet werden (zu Schriften siehe Abschnitt
+\ref{sec_schrift}), Voreinstellung. \Lenv{de\-scription}
+
+\item[12ptt:] Verwendet 12pt TeX"=Schriftgrößen, kann mit cmr- oder
+dc/ec"=Schriften verwendet werden.
+
+\item[fleqn:] Linksbündige Formeln, Voreinstellung. Falls Sie
+AmS"=\LaTeX{} verwenden, sollten Sie diese Option explizit angeben:
+\bs{}documentclass""[fleqn]""\{me"-tro"-art\}, damit auch das
+AmS"=Paket
+die Formeln linksbündig setzt.
+
+\item[nofleqn:] Zentrierte Formeln; falls Ihre Formeln nicht
+linksbündig
+gesetzt werden können, verwenden Sie diese Option (aber bitte nur,
+wenn es
+wirklich nicht anders geht).
+
+\item[draft:] Ausgabe eines schwarzen Balkens an allen Stellen, an
+denen
+die Zeile zu lang ist (Warnung "`Overfull \bs{}hbox \dots"').
+
+\item[final:] Keine Ausgabe des schwarzen Balkens (Voreinstellung).
+\end{description}
+%
+\pagebreak[3]
+Eine Papiergröße brauchen Sie nicht anzugeben (\emph{a4paper} ist
+voreingestellt). Andere Klassen"=Optionen (wie \emph{titlepage,
+openany, twocolumn} etc.) können nicht verwendet werden.
+
+\section{Die Gliederungsbefehle}
+
+\subsection{"`metroart"': Artikel in Sammelwerken
+\Lbef{subsection}}\label{gliederart}
+
+Die Klasse \emph{metroart} orientiert sich, zumindest bei der
+Verwendung der Überschriftenbefehle, weitgehend an der Standardklasse
+\emph{article}. Der Text für den Titel des Artikels wird mit den
+üblichen Befehlen \bs{}title, \bs{}author und \bs{}thanks festgelegt;
+\bs{}maketitle erzeugt die Titelzeilen. Außerdem stellt
+\emph{metroart} den Befehl \bs{}subtitle bereit, mit dem analog zu
+\bs{}title ein Untertitel erzeugt werden kann. \bs{}date wird nicht
+unterstützt, da wir im Titel eines Artikels kein Datum angeben. Auch
+\bs{}and verwenden wir nicht -- geben Sie mehrere Autorennamen einfach
+als Aufzählung (Name, Name und Name) an.
+
+Der Inhalt von \bs{}title und \bs{}author wird in die Kopfzeile
+aufgenommen, auf linken Seiten erscheint der Name der Autorin bzw. des
+Autors, auf rechten Seiten der Titel des Beitrags. Aus diesem Grunde
+haben die drei Befehle analog zu |\(sub)section| ein optionales
+Argument erhalten, mit dem ein veränderter Kopfzeilen- und
+Verzeichniseintrag angegeben werden kann. Ein Beispiel:
+
+\begin{verbatim}
+\title[Kurztitel]{Vollständiger Titel 
+       des Aufsatzes}
+\subtitle{Der Untertitel}
+\author[Name, Name und Name]{Langer Name,
+       Längerer Name und Noch Ein Name}
+\maketitle
+\end{verbatim}
+%
+\bs{}maketitle wird von uns für den Titel \emph{jedes} Beitrags in
+einem Sammelband verwendet. \bs{}title, \bs{}subtitle und \bs{}author
+werden in das Inhaltsverzeichnis aufgenommen. Die einzelnen
+Sammelbandaufsätze können so mit einer Steuerdatei zusammengefaßt
+werden (was mit Standard-\LaTeX{} nicht möglich ist).
+
+Für Überschriften ersten Grades sollte der Befehl \bs{}section
+verwendet werden, \bs{}chapter ist (\LaTeX{}"=üblich) nicht definiert.
+Dementsprechend werden weitere Gliederungsebenen mit \bs{}subsection
+und \bs{}subsubsection angesprochen. Auch \bs{}paragraph und
+\bs{}subparagraph werden unterstützt. Diese Befehle erzeugen keine
+Überschrift, sondern setzen den als Argument angegebenen Text
+hervorgehoben an den Absatzbeginn.
+
+Die Überschriftenebenen unterscheiden sich allein durch die
+Gliederungsnummern voneinander. Schriftgröße, "~art, "~schnitt und
+Abstände sind bei allen Gliederungsbefehlen identisch: Wir setzen
+Überschriften aus der Grundschrift, 12pt kursiv, zentriert, mit ca. 3
+Zeilen Abstand nach oben und $1/2$ Zeile nach unten. Alle
+\bs{}\dots{}section"=Befehle erzeugen Gliederungsnummern -- falls Sie
+dies nicht wünschen, können Sie den Zähler \emph{secnumdepth}
+verändern. Er ist auf den Wert 3 voreingestellt, wenn Sie
+\bs{}subsubsection nicht numerieren wollen, können Sie dies durch den
+Befehl \bs{}setcounter\{secnumdepth\}\{2\} erreichen.
+
+\clearpage%***
+\subsection{"`metrobk"': Monographien}
+
+Die Gliederungsbefehle \bs{}part, \bs{}chapter, \bs{}section,
+\bs{}subsection und \bs{}subsubsection arbeiten ebenso wie die in der
+Standard"=Klasse \emph{book} definierten Befehle. \bs{}part und
+\bs{}chapter beginnen eine rechte Seite, Fußnoten, Formeln, Tabellen
+und Abbildungen werden kapitelweise numeriert. Die Kopfzeilen
+enthalten (neben der Seitennummer) auf linken (geraden) Seiten den
+Titel des Teils, auf rechten (ungeraden) Seiten den Titel des
+Kapitels. Falls Sie nicht in Teile untergliedern -- \bs{}part also
+nicht verwendet wird --\,, enthalten linke Kopfzeilen die
+Kapitelüberschrift, rechte Kopfzeilen den Inhalt von \bs{}section --
+durch ein paar Makro"=Tricks passiert das abweichend von
+Standard-\LaTeX{} ganz automatisch.
+
+Auch \bs{}paragraph und \bs{}subparagraph werden unterstützt. Diese
+Befehle erzeugen keine Überschrift, sondern setzen den als Argument
+angegebenen Text hervorgehoben an den Absatzbeginn.
+
+Die Überschriftenbefehl \bs{}section bis \bs{}subsubsection
+unterscheiden sich allein durch die Gliederungsnummern voneinander.
+Schriftgröße, "~art, "~schnitt und Abstände sind bei allen
+Gliederungsbefehlen identisch: Wir setzen Überschriften aus der
+Grundschrift, 12pt kursiv, zentriert, mit ca. 3 Zeilen Abstand nach
+oben und $1/2$ Zeile nach unten. Sie sollten daher nach Möglichkeit
+keine Gliederungsbefehle verwenden, die die Gliederungsnummern
+unterdrücken, um die logische Struktur des Textes nachvollziehbar zu
+gestalten.
+
+Durch den Zähler \emph{secnumdepth} kann festgelegt werden, bis zu
+welcher Gliederungsebene Überschriften numeriert werden sollen. Er ist
+auf den Wert 2 voreingestellt, d.\,h. alle Ebenen bis einschließlich
+\bs{}subsection werden nummeriert. Sie können den Befehl
+\bs{}subsubsection verwenden, um eine Überschrift ohne
+Gliederungsnummer zu erzeugen. Falls Sie \bs{}subsubsection auch mit
+Nummern versehen wollen -- Sie erhalten dann vierstellige
+Gliederungsziffern -- können Sie dies durch den Befehl
+\bs{}setcounter\{secnumdepth\}\{3\} erreichen.
+
+Die Titelei"=Befehle (\bs{}title, \bs{}author, \bs{}maketitle usw.)
+werden bei Monographien von uns nicht verwendet. Sie funktionieren
+allerdings trotzdem, Sie können damit ein vorläufiges Deckblatt
+erstellen. Zusätzlich haben wir den Befehl \bs{}subtitle eingeführt,
+der einen Untertitel erzeugt. Er funktioniert analog zu \bs{}title.
+Die optionalen Argumente, die von der Klasse \emph{metroart}
+bereitgestellt werden (siehe oben, Abschnitt \ref{gliederart}),
+unterstützt \emph{metrobk} allerdings nicht -- der Buchtitel wird ja
+nicht in Kopfzeilen und Inhaltsverzeichnis aufgenommen.
+
+\section{Schriftarten}\label{sec_schrift}
+
+In unseren Büchern verwenden wir üblicherweise \glq glatte\grq\
+Schriftgrößen, nicht die \TeX"=üblichen (also 14pt statt 14.4pt). Dies
+führt zu Problemen bei der Verwendung der cmr- oder ec/dc"=Schriften,
+diese stehen nicht für jede Größe bereit. Sie sollten, falls möglich,
+Postscriptschriften verwenden. Falls Sie Postscriptzeichensätze auf
+Ihrem Rechner verfügbar haben, können Sie mit\nopagebreak
+
+\begin{verbatim}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\end{verbatim} 
+%
+auf die Schriftart Times"=Roman (in der T1"=Codierung) umschalten. Wir
+verwenden die Schriftart Garamond (Stempel Garamond von Bitstream),
+die mit dem Befehl \bs{}usepackage\{bstgaramo\} benutzt werden kann,
+falls Sie die entsprechende Schrift installiert haben.
+
+Damit auch in Formeln eine Times verwendet wird, sollten Sie
+zusätzlich das Paket "`mathptm"' einbinden. Für andere
+Postscript"=Schriften ist kein ähnliches Paket verfügbar. Für die
+Bitstream Garamond haben wir eine entsprechende Anpassung vorgenommen,
+falls Sie diese verwenden wollen, wenden Sie sich an den Verlag.
+
+Sofern Ihr Text im Verlag überarbeitet wird, bleibt Ihnen überlassen,
+welche Schriftart Sie verwenden -- für das Erstellen der Druckvorlage
+ändern wir die Schriftart auf Garamond. Sie sollten jedoch keine
+serifenlose Schrift (Helvetica, Avantgarde) benutzen -- Serifen führen
+das Auge, wodurch Texte besser lesbar werden. Unsere Erfahrung ist,
+daß viele Schreibfehler übersehen werden, wenn Texte mit serifenloser
+Schrift Korrektur gelesen werden.
+
+Falls Sie keine Postscriptschriften benutzen können, sollten Sie den
+Befehl \bs{}documentclass mit der Option [12ptt] verwenden -- dann
+werden nur Schriftgrößen verwendet, die auch von den cmr bzw.
+dc/ec"=Schriften bereitgestellt werden. Die ec"=Schriften (die
+endgültige Version der ehemaligen dc"=Schriften) sind den
+cmr"=Schriften vorzuziehen, da sie viele europäische Sonderzeichen
+enthalten, die durch die cmr"=Schriften nur unzureichend nachgebildet
+werden. Außerdem erleichtern sie die Trennung von umlautbehafteten
+Silben. Sie aktivieren die dc/ec"=Schriften mit dem Befehl
+\bs{}usepackage""[T1]""\{fontenc\}.
+
+\section{Verwendung von Makropaketen}
+
+Bitte verzichten Sie auf alle Pakete, die Sie nicht unbedingt
+benötigen. Wir haben nur einen kleinen Teil der verfügbaren
+Makropakete installiert (es gibt einige hunderte!). Folgende Pakete
+sind jedoch unproblematisch und z.\,T. dringend zu empfehlen:
+
+\begin{description}
+\item[german.sty:] Stellt vereinfachte Befehle für deutsche Umlaute,
+Anführungszeichen, bedingte Trennungen etc. bereit. Für
+deutschsprachige Texte unbedingt zu empfehlen (alternativ können Sie
+\emph{babel.sty} verwenden). Die Zusatzbefehle von german.sty und
+babel.sty sind weitgehend kompatibel.
+
+\item[amsmath:] AmS"=\LaTeX"=Paket für den Formelsatz. Sie können
+\emph{amsmath} ebenso wie die anderen AmS"=\LaTeX"=Pakete verwenden;
+bitte geben Sie dann die globale Option \emph{fleqn} im Befehl
+\bs{}documentclass an (sonst werden die Formeln zentriert, die mit den
+AmS"=Befehlen gesetzt werden).
+
+\item[times etc.:] Wie schon im Abschnitt \ref{sec_schrift} erläutert,
+sollten Sie, wenn möglich, Postscriptschriften verwenden. Welche
+Schrift Sie benutzen (Times, Garamond oder eine andere
+Serifen"=Schrift), bleibt Ihnen überlassen -- wenn Ihr Text bei uns
+überarbeitet wird, verwenden wir \emph{bstgaramo}.
+
+\item[fontenc:] Wählt die Codierung der Sonderzeichen im Zeichensatz
+aus. Für Westeuropa ist die T1"=Codierung zu empfehlen:
+\bs{}usepackage""[T1]""\{font\-enc\}.
+
+\item[inputenc:] Stellt die Codierung der \emph{Eingabedatei} ein: Mit
+\bs{}usepackage""[latin1]""\{input\-enc\} können Sie u.\,a. die
+deutschen Umlaute als |ä|, |ö|, |ü| statt |\"a|, |\"o|, |\"u|
+eingeben. Falls Sie Ihre Datei im MS"=DOS"=Zeichensatz speichern,
+müssen Sie die Codierung "`cp850"' wählen (latin1 ist für MS"=Windows,
+OS/2 und viele Unixe).
+
+\item[Grafik-Pakete:] Wir unterstützen eepic und graphics (enthält
+u.a. epsfig, graphics, graphicx). Siehe auch Abschnitt \ref{sec_abb}.
+\end{description}
+%
+Außerdem können Sie die meisten der Standard"=Pakete verwenden, die
+zur \LaTeXe"=Distribution oder zum Tools"=Paket gehören. Dies sind
+u.\,a.:
+
+\begin{quote}
+afterpage, tabularx, longtable, array, dcolumn, delarray, bezier,
+theorem, varioref, xr, xspace, enumerate, flafter, graphpap, hhline,
+ifthen, alltt, shortvrb und verbatim. \Lenv{quote}
+\end{quote}
+%
+Pakete, die das Layout beeinflussen, sollten Sie nicht benutzen,
+insbesondere nicht "`leqno"' oder "`fancyheadings"'. Möglicherweise
+funktionieren einige Standard"=Pakete nicht mit unseren Klassendateien
+-- wir haben nicht alles ausprobiert. Falls Sie auf Probleme stoßen,
+bitten wir um Nachricht.
+
+Sofern Ihr Text im Verlag überarbeitet wird, sollten Sie auf keinen
+Fall andere Makropakete verwenden, weil wir diese nicht installiert
+haben. Falls Sie auf ein hier nicht genanntes Paket nicht verzichten
+können, legen Sie die notwendigen Dateien bitte unbedingt Ihrem Text
+auf Diskette bei. Wir werden dann versuchen, es zu verwenden.
+
+\section{Sprachen}
+
+Wir unterstützen derzeit nur Englisch und Deutsch. 
+Falls Sie z.\,B. französische Trennungen benötigen, geben Sie diese 
+bitte per Hand an -- bei kurzen Zitaten u.\,ä. können Sie aber auch 
+in der Hauptsprache Ihres Textes trennen lassen.
+
+Die Klassendateien definieren einige Begriffe um (z.B. "`Inhalt"'
+statt "`Inhaltsverzeichnis"'), wodurch es notwendig wurde,
+standardmäßig die deutschen Überschriftennamen zu aktivieren. Falls
+sie englische Texte schreiben, sollten Sie nach dem Befehl
+\bs{}begin\{document\} die englischen Begriffe mit
+\bs{}selectlanguage\{english\} (oder der von uns definierten Abkürzung
+\bs{}engl) reaktivieren. Der Befehl \bs{}selectlanguage funktioniert
+allerdings nur, wenn Sie \emph{german.sty} oder Babel verwenden --
+falls Sie darauf verzichten wollen, können Sie \bs{}captionsenglish
+angeben, dies funktioniert mit unseren Klassendateien auch ohne die
+Sprachpakete.
+
+\section{Hinweise zum Layout}
+\subsection{Tabellen und Abbildungen}\label{sec_abb}
+
+Es ist im Rahmen eines kurzen Textes nicht möglich, detaillierte
+Hinweise für die Gestaltung von Abbildungen und Tabellen zu geben.
+Deshalb folgend nur einige allgemeine Regeln. Wichtig: Verwenden Sie
+keine zu kleinen Schriftgrößen -- \bs{}scriptsize (entspricht 9pt) ist
+das absolute Minimum und sollte nur für kurze Tabbelleneinträge,
+Abbildungsbeschriftungen und ähnliches verwendet werden. Für längere
+Texte ist \bs{}footnotesize (10.5\,pt) die kleinste Schriftgröße. Vor
+dem Druck werden die Vorlagen auf 84\,\% verkleinert. Zwei
+Layout"=Beispiele finden Sie in Tabelle \ref{tab} und Abbildung
+\ref{abb_beispiel}.
+
+\begin{table}[htb]
+\engl
+\caption{Summary Statistics}\label{tab}
+\begin{center}
+\begin{tabular}{|l|l|r|r|}
+\hline
+& year & 1991 & s\hfil\\ \hline
+statistic & variable &  &  \\ \hline
+Gini & net equivalised income & .296 & 12.93* \\ 
+& gross equivalised income & .334 &  \\ 
+$GE_{-1}$ & net equivalised income & .326 & 4.98* \\ 
+& gross equivalised income & .533 &  \\ 
+$GE_0$ & net equivalised income & .168 & 4.05* \\ 
+& gross equivalised income & .188 &  \\ \hline
+\end{tabular}
+\end{center}
+\quelle{\ger Note: * denotes statistical
+significance.\\[\medskipamount]Vor dem 
+\bs{}caption"=Befehl wurde mit \Lbef{engl} auf Englisch
+umgeschaltet,
+um eine englische Überschrift zu erhalten. \Lbef{quelle}}
+\end{table}
+
+\begin{figure}[htb]
+\caption{Monopolistic Competition \Lbef{caption}}\label{abb_beispiel}
+\begin{center}
+\epsfig{file=figures/unilogo.eps}
+\end{center}
+\quelle{\textit{Quelle: Zwick 1999, 119}\\[\medskipamount]
+Die Abbildung wurde mit \Lbef{epsfig} eingebunden, Umgebung
+\Lenv{figure}, Legende und Quellenangabe
+mit \Lbef{quelle}.}
+\end{figure}
+
+\begin{enumerate}
+\item Tabellen sollten zusammen mit Überschrift und Legende in eine
+\emph{table}"=Umgebung gefaßt werden. Bitte verwenden Sie
+\emph{tabular} statt \emph{tabbing}. Für Legenden, Quellenangaben etc.
+haben wir den Befehl \bs{}quelle eingeführt (siehe Abschnitt
+\ref{sec_bef}). \Lenv{enumerate}
+
+\item Analog sollten Abbildungen mit \emph{figure} gemacht werden.
+
+\item Falls Sie die Quellenangabe nicht mit \bs{}quelle formatieren, 
+stellen Sie die Schriftgröße bitte auf \bs{}footnotesize.
+
+\item Den Tabellen- oder Abbildungstitel bitte mit dem Befehl
+\bs{}caption setzen. Der Titel gehört über die Abbildung.
+
+\item Tabellen und Abbildungen sollten mit der center"=Umgebung
+zentriert werden. Die Satzbreite darf nicht überschritten werden.
+
+\item Verweisen Sie im Text bitte mit dem Befehl \bs{}ref auf die
+Nummer der Abbildung bzw. Tabelle. Verweise in der Art "`nachstehend,
+unten auf der Seite, nächste Seite"' stimmen mit Sicherheit nicht
+mehr, wenn wir den Text bearbeiten.
+
+\item Verwenden Sie für eingebundene Abbildungen bitte Postscript
+(.eps) und die Befehle aus dem \emph{graphics}"=Paket (\bs{}epsfig
+oder \bs{}includegraphics). Wir verwenden für die Ausgabe der
+Druckvorlagen den Treiber \emph{dvips}, kontrollieren Sie bitte, ob
+dvips Ihre Abbildungen einbinden kann.
+
+\item Falls Sie eine Abbildung nicht als Postscript"=Datei einbinden
+können, legen Sie bitte einen (schwarz"=weißen!)
+Laserdrucker"=Ausdruck bei. Falls Sie graue Rasterflächen verwenden,
+drucken Sie bitte mit 300\,dpi aus. Falls bei Ihrem Druckertreiber die
+Rasterweite verändert werden kann, können Sie auch mit höherer
+Auflösung ausdrucken, stellen Sie dann bitte die Rasterweite auf
+70\,lpi.
+
+\item Bitte verwenden Sie keine \bs{}special"=Befehle, die einen
+anderen Dru"ckertreiber als \emph{dvips} vorraussetzen -- dvips
+unterstützt allerdings die emTeX-specials.
+\end{enumerate}
+
+\subsection{Neue Befehle}\label{sec_bef}
+
+Folgende Befehle und Umgebungen haben wir neu geschaffen:
+
+\begin{itemize}
+\item Der Befehl \bs{}quelle formatiert eine Legende oder
+Quellenangabe
+unter einer Tabelle oder Abbildung. Verwendung:\\
+|\quelle{Quelle: Mayer/Schulze 1997, S. 35.}|\\
+Bitte schließen Sie zuvor eine evtl. für die Abbildung geöffnete
+center"=Umgebung, die
+Quellenangabe sollte linksbündig stehen.
+
+\item Analog zur Umgebung \emph{enumerate} können sie
+\emph{benumerate} verwenden, wenn die Numerierung zweistellig wird.
+Der Einzug bei \emph{enumerate} ist bei uns recht schmal bemessen, er
+bietet nur einstelligen Ziffern Platz.
+
+\item Der Befehl \bs{}subtitle formatiert einen Untertitel analog zu
+\bs{}title.
+
+\item Zur einfachen Sprachumschaltung können Sie |\ger| oder |\engl|
+verwenden (funktioniert mit german.sty und Babel). Dies ist besonders
+im Literaturverzeichnis sinnvoll, um richtige Trennungen bei
+unterschiedlichen Sprachen zu erhalten.
+
+\item Die Umgebung \emph{literatur} ist dazu gedacht,
+Literaturverzeichnisse per Hand zu erstellen. Jeder Titel beginnt mit
+dem Befehl \bs{}item.
+\end{itemize}
+%
+Dies war ein Beispiel für die Umgebung \Lenv{itemize} (wie Sie sehen,
+ziehen wir Spiegelstriche den \LaTeX"="`Bullets"' vor). Der erste
+Absatz, der auf eine Aufzählung folgt, soll keinen Erstzeileneinzug
+erhalten. Deswegen darf zwischen dem Ende der itemize"=Umgebung und
+nachfolgendem Text keine Leerzeile stehen (siehe Abschnitt
+\ref{sec_hinweise}).
+
+\subsection{Formeln}
+
+Soweit möglich, sollten Formeln linksbündig stehen (mit 1~cm Einzug
+vom Rand). Die Nummern stehen rechts. Beides ist in den
+Metropolis"=Klassen voreingestellt. Ein paar Beispiele:
+
+\[
+g=\alpha + \beta u
+\]
+\begin{equation}\label{eq_text}
+g > 0 \qquad \textrm{für}\quad r-i > 0\,.
+\end{equation}
+%
+Texteinschübe (wie in Formel \ref{eq_text}) sollten mit dem Befehl
+\bs{}textrm\{\} gesetzt werden. Damit der auf die Formel folgende
+Absatz nicht eingerückt wird, darf zwischen Formel und nachfolgendem
+Text keine Leerzeile stehen (oder muß mit \% auskommentiert werden).
+
+\subsection{Trennungen}
+
+Auch wenn der Zeilenumbruch bei uns wahrscheinlich anders verläuft als
+bei Ihnen -- trennen Sie Ihren Text bitte sorgfältig. Sie sollten bei
+der abschließenden \LaTeX"=Bearbeitung keine Warnmeldungen erhalten,
+die auf Fehler beim Zeilenumbruch hinweisen ("`Overfull (oder
+underfull) \bs{}hbox in paragraph at line \dots"'). Außerdem sollten
+Sie kontrollieren, ob alle Trennungen den Rechtschreibregeln
+entsprechen -- \TeX{} trennt zwar sehr gut, aber nicht
+perfekt.\footnote{Ein beliebter Trennfehler ist "`Wach-stum"' statt
+"`Wachs-tum"'.} Anstatt bedingte Trennstriche an allen Problemstellen
+einzufügen, sollten Sie besser den Befehl \bs{}hyphenation im Vorspann
+(vor \bs{}begin\{document\}) Ihrer Datei verwenden (zumindest dann,
+wenn das betreffende Wort mehr als einmal in Ihrem Text vorkommt).
+\bs{}hyphenation kann leider nur ganze Wörter erkennen, einzelne
+Silben können nicht angegeben werden. Sie müssen daher jede Form eines
+schwierig zu trennenden Wortes eintippen. Ein Beispiel:
+
+\begin{verbatim}
+%Ein paar Worte, die nie getrennt werden sollen:
+\hyphenation{eine einer eines weder wegen hatte 
+alle aller lege legen 
+%Häufige Trennfehler:
+Wachs-tum Wachs-tums Wachs-tums-rate 
+Wachs-tums-raten Wirt-schafts-wachs-tum 
+Wirt-schafts-wachs-tums}
+\end{verbatim}
+%
+Falls Sie einen Zeichensatz in T1"=Codierung verwenden (siehe
+Abschnitt \ref{sec_schrift}), können Sie den \bs{}hyphenation-Befehl
+auch mit Wörtern verwenden, die Umlaute enthalten. Bei der \glq
+alten\grq{} OT1"=Codierung geht dies nicht.
+
+Wir lassen einen recht lockeren Blocksatz zu, um den Zeilenumbruch
+nicht allzu schwierig zu gestalten. Es kann daher sein, daß einige
+Zeilen recht große Leerstellen enthalten, ohne daß eine Warnung
+ausgegeben wird. Versuchen Sie in diesem Fall, weitere
+Trennmöglichkeiten anzugeben.
+
+Manuelle Zeilenumbrüche (mit \bs{}newline bzw. \bs{}linebreak) sollten
+Sie nicht verwenden -- wenn Sie ausreichend Trennmöglichkeiten
+angeben, geht es zumeist auch ohne! Häufig hilft es, statt
+Bindestrichen den Befehl |"=| zu verwenden, oder mit |""|
+Trennmöglichkeiten ohne Trennstrich anzugeben (z.\,B.
+|Mey|"-|er/""|""|Schul|"-|ze|). Den Befehl \bs{}sloppy bzw. die
+Umgebung \emph{sloppypar} sollten Sie nicht verwenden, hiermit werden
+die Wortabstände meistens zu groß.
+
+\subsection{Besondere Hinweise zu Monographien}
+
+Sofern wir mit Ihnen vereinbart haben, daß Sie uns druckfertige
+Unterlagen liefern, erwarten wir eine fertige Postscriptdatei von
+Ihnen. Dafür sind eine paar Besonderheiten zu beachten:
+
+\begin{itemize}
+\item Ihre Datei beginnt mit Seite fünf. Titelseite, Impressum etc.
+legen wir an. Auf Seite fünf kann die Danksagung, das
+Inhaltsverzeichnis oder ähnliches stehen. Eine provisorische
+Titelseite können Sie natürlich trotzdem anlegen -- stellen Sie dann
+aber \emph{nach} der Titelseite den Seitenzähler auf fünf um
+(\bs{}setcounter""\{page\}""\{5\}).
+
+\item Nach \bs{}begin\{document\} verwenden Sie bitte
+\bs{}frontmatter, damit Danksagung, Inhalt usw. keine Kopfzeilen
+bekommen. Vor Ihrem ersten \bs{}part oder \bs{}chapter aktivieren Sie
+mit \bs{}mainmatter die Kopfzeilen. \bs{}backmatter müssen Sie nicht
+verwenden, kann aber nützlich sein, um einen nicht numerierten Anhang
+zu erzeugen (der trotzdem in's Inhaltsverzeichnis aufgenommen wird,
+was bei der Sternform der Überschrift nicht der Fall wäre).
+
+\item Alles, was vor dem Inhaltsverzeichnis steht, erhält keinen
+Verzeichniseintrag. Die Überschrift über einem vorangestellten
+Vorwort, einer Danksagung etc. also mit \bs{}chapter* formatieren.
+
+\item Wenn alles fertig ist, wandeln Sie Ihre .dvi-Datei bitte mit
+dvips in Postscript um und schicken sie uns. Sofern sie kleiner als 20
+MByte ist, am besten per Email an info@metropolis-verlag.de.
+
+\item dvips sollte die Auflösung 600\,dpi verwenden (z.B. mit dem Mode
+ljfour).
+
+\item Achten Sie darauf, daß dvips alle Schriftarten in die Datei
+einbindet -- außer den Acrobat"=Standardschriften (Courier, Times,
+Helvetica, Symbol, ZapfDingbats), diese sollten nicht eingebunden
+werden. Die CM"=Schriften sollten möglichst als Postscript-Fonts,
+nicht als PK-Fonts eingebunden werden -- dies erhöht die Qualität
+deutlich (läßt sich in config.ps einstellen).
+
+\item Bitte kontrollieren Sie die Silbentrennung, den Zeilen- und
+Seitenumbruch gründlich.
+\end{itemize}
+
+\subsection{Weitere Hinweise}\label{sec_hinweise}
+
+\paragraph{Hervorhebungen im Text: \Lbef{paragraph}} Bitte verwenden
+Sie den Befehl \bs{}emph\{text\}, um Hervorhebungen \emph{in kursiv}
+zu erzeugen. Der Befehl erzeugt automatisch notwendigen Abstand zu
+nachfolgenden Zeichen. Das \LaTeX"=2.09 Konstrukt \{\bs{}em text\bs/\}
+sollte nicht mehr verwendet werden. Fette Schriften sollten Sie
+vermeiden.
+
+\paragraph{Absatzeinzüge:} Wir rücken die erste Zeile jedes Absatzes
+ein, der auf einen normalen Absatz folgt. Steht vor dem Absatz ein
+Zitat, eine Formel, Aufzählung, Tabelle oder ähnliches, wird die erste
+Zeile nicht eingerückt.\footnote{Absatzeinzüge dienen dazu, deutlich
+zu machen, wo ein neuer Absatz beginnt. Nach Aufzählungen und Formeln
+ist dies nicht erforderlich, auch wenn \LaTeX{} in der Lage ist, zu
+unterscheiden, ob ein auf eine Formel folgender Text zum
+vorangegangenen Absatz gehören soll oder nicht.} Damit \LaTeX{} nach
+Formeln, Aufzählungen etc. keine Absatzeinzüge macht, darf zwischen
+Formel und nachfolgendem Text keine Leerzeile stehen (oder muß mit \%
+auskommentiert werden).
+
+\paragraph{Zitate:} Längere Zitate werden mit der Umgebung
+\emph{quote} gesetzt:
+
+\begin{quote}
+"`seid fruchtbar, mehret euch und füllet die Erde, und machet sie euch
+untertan, und herrschet über die Fische im Meer und über die Vögel
+unter dem Himmel und über alles Getier, das auf Erden kriecht."'
+(Genesis I, 28) \Lenv{quote}
+\end{quote}
+
+\begin{quote}
+"`Durch diese Verleihung hat Gott dem Menschen kein persönliches
+Besitzrecht über die niedrigen Lebewesen übertragen, sondern ein der
+gesamten Menschheit gemeinsames Recht."' (Locke 1988: I § 24)
+\end{quote}
+%
+Aufeinanderfolgende Zitate sollten jeweils in eine eigene
+quote"=Umgebung verpackt werden, damit sie durch etwas Leerraum
+getrennt werden. Damit der nachfolgende normale Absatz nicht
+eingerückt wird, darf nach der quote"=Umgebung keine Leerzeile stehen.
+Die Absatzanfänge des Zitats sollten ebenfalls nicht eingerückt
+werden, verwenden Sie die Umgebung \emph{quotation} daher bitte nicht.
+
+\paragraph{Binde- und Gedankenstriche:} In vielen \TeX- bzw.
+\LaTeX"=Handbüchern wird darauf hingewiesen, daß der Gedankenstrich
+etwas länger ist als ein Bindestrich. Üblicherweise wird für den
+Gedankenstrich (---) der Befehl "`|---|"' benutzt, für den
+Streckenstrich (Bis-Strich, wie in "`20 -- 30\,"') steht "`|--|"' und
+das Divis (-, Befehl "`|-|"') findet nur als Binde- und Trennstrich
+Verwendung. \textbf{Wir verwenden den langen Gedankenstrich (---)
+jedoch nicht\,!} Bitte benutzen Sie den Befehl "`|--|"' sowohl für den
+Gedankenstrich als auch für den Streckenstrich. Vor und hinter den
+Gedanken- und Streckenstrich gehört ein Leerzeichen. Für Binde- und
+Trennstriche sollten Sie den einfachen Bindestrich "`-"' benutzen --
+hin und wieder finden wir Konstrukte wie "`Zu-- und Abgang"' oder
+"`Wortungetüm--Bindestrich"', beides ist unschön (und unüblich). Falls
+Sie das Paket german.sty oder Babel verwenden, sollten Sie den Befehl
+|"=| benutzen, um einen Bindestrich zu erzeugen, der bessere
+Trennungen des hinteren Wortteils erlaubt. Der geschützte Bindestrich
+(wie in "`Schriftgröße, "~art, "~stil"', kein Zeilenumbruch zwischen
+Bindestrich und Wortanfang) wird mit german.sty mit dem Befehl |"~|
+bereitgestellt.
+
+\paragraph{Abkürzungen} sollten ohne Leerzeichen gesetzt werden: u.a.
+statt u. a. (andernfalls können die Buchstaben beim Blocksatz zu weit
+auseinandergerissen werden). Falls Sie den Aufwand nicht scheuen,
+können Sie einen kleinen festen Leerraum mit dem Befehl |\,| zwischen
+die Buchstaben setzen: |u.\,a.|, Ergebnis: u.\,a. Am Satzanfang
+sollten Abkürzungen ausgeschrieben werden. Z.\,B. sollte dieser Satz
+besser mit "`Zum Beispiel"' begonnen werden.
+
+Da wir "`frenchspacing"' (auch bei englischsprachigen Texten)
+verwenden, brauchen Sie bei Abkürzungen die Befehle |\@| und |\ |
+(\bs{} und Leerzeichen) nicht zu verwenden. Unsere Klassen erzeugen
+nach einem Punkt immer nur eine einfache Leerstelle.
+
+\paragraph{Anführungszeichen:} Für deutschsprachige Texte verwenden
+wir deutsche Anführungszeichen, für englischsprachige
+englische.
+Mit \emph{german.""sty} oder \emph{babel} erhalten Sie deutsche
+Anführungszeichen mit den Befehlen |"`| und |"'|: "`deutsch"',
+englische mit |``| und |''|: ``english''. Bitte verwenden Sie nie den
+Befehl |"|, dieser ist inkompatibel zu \emph{german.sty} und kann bei
+uns zu Problemen führen (wir verwenden auch für englischsprachige
+Texte \emph{german.sty}, um die vereinfachten Trennbefehle zu
+erhalten). Einfache Anführungszeichen erhalten Sie durch \bs{}glq und
+\bs{}grq für \glq deutsche\grq{} Zeichen bzw. |`| und |'| für
+`englische'. Falls Sie in einem deutschsprachigen Text kurze englische
+Passagen zitieren, sollten Sie trotzdem die deutschen Zeichen
+verwenden.
+
+\paragraph{Zitierweise:} Verweise generell in die Fußnoten. In den
+Fußnoten verwenden Sie bitte die amerikanische Zitierweise: Meyer
+1990, 12. Mehrere Namen: Meyer/""Schmidt 1998. Bei zwei oder mehr
+Titeln eines Autors aus dem gleichen Jahr: 1990a, 1990b. Bei mehr als
+zwei Autoren: Meyer et al. 1998, 12.
+
+\paragraph{Fußnoten} beginnen mit einem Großbuchstaben und werden mit
+einem Punkt abgeschlossen.\footnote{Auch dann, wenn in der Fußnote nur
+ein Literaturhinweis in der Form "`Vgl. Meyer 1990, 12."' steht.} Dies
+gilt auch für Quellenangaben unter Abbildungen und Tabellen.
+
+\subsection{Literaturverzeichnis}
+
+Wenn möglich, erstellen Sie Ihr Literaturverzeichnis bitte per Hand
+mit der Umgebung \emph{literatur}. Die Formatierung wird dann unseren
+Wünschen angepaßt (Absätze 1\,cm hängend, 3\,pt Abstand vor jedem
+Absatz, Schriftgröße 11\,pt). Bei englischsprachigen Texten,
+insbesondere, wenn das gesamte Buch englisch ist, sollten Sie im
+Literaturverzeichnis Titel bzw. Zeitschrift wie üblich kursiv
+hervorheben.
+
+Die \emph{literatur}-Umgebung ist als Liste realisiert, jeder
+Literatureintrag beginnt mit dem Befehl \bs{}item. Bitte stellen Sie
+die Sprache auf die des jeweiligen Titels, um korrekte Trennungen zu
+erhalten. Sie können hierzu die Abkürzungen \bs{}ger und \bs{}engl
+verwenden.
+
+Falls Sie bibTeX verwenden, können Sie unsere bibTeX"=Vorlage
+\emph{apametro} benutzen -- sie orientiert sich an \emph{apalike}. Mit
+dem \bs{}cite"=Befehl erhalten Sie Verweise in der Form
+\cite{Silverman:86}. Weitere Hinweise stehen in der Datei readme.txt,
+die \emph{apametro} beiliegt. Die Formatierung ist mit bibTeX leider
+nicht ganz so zu realisieren, wir wir es wünschen -- aber notfalls
+geht's.
+
+Problematisch ist die Verwendung von \emph{apametro}, wenn Sie Titel
+in unterschiedlichen Sprachen angeben. Eine Sprachumschaltung für
+einzelne Titel ist nicht möglich, wodurch falsche Trennungen auftreten
+können. Das Literaturverzeichnis sollte dann in der Sprache gemacht
+werden, in der der Haupttext geschrieben wurde, es sei denn, Sie
+zitieren fast ausschließlich Titel in einer anderen Sprache. Wenn Ihr
+Text beispielsweise deutschsprachig, die Literatur jedoch überwiegend
+englischsprachig ist (so wie im Beispiel unten), können Sie vor
+\bs{}bibliography mit den Befehlen \bs{}engl""\bs{}captionsgerman auf
+englische Trennungen umschalten. \bs{}captionsgerman ist nötig, um
+eine deutschsprachige Abschnittsüberschrift zu erhalten ("`Literatur"'
+statt "`References"').
+
+\bigskip\noindent
+Ein Beispiel für ein "`zu Fuß"' erstelltes Literaturverzeichnis:
+\begin{literatur}
+\item\engl Eijffinger, S.C.W., De Haan, J. (1996): The Political
+Economy of
+Central-Bank Independence, Princeton University, Special Papers in
+International Economics, No.~19
+\item Fuhrer, J.C. (Hrsg.) (1994): Goals, Guidelines, and Constraints
+Facing
+Monetary Policymakers, Proceedings of a Conference Held in June 1994,
+Sponsored by The Federal Reserve Bank of Boston
+\item Grilli, V., Masciandaro, D., Tabellini, G. (1991): Political and
+Monetary Institutions and Public Financial Policies in the Industrial
+Countries, in: Economic Policy, 13, S.~342-392
+\item\ger Kirchgässner, G. (1993): Vom Nutzen der Wirtschaftstheorie
+für
+die
+Wirtschaftspolitik, in: Konjunkturpolitik Nr.~3, S.~201-225
+\item\engl Zwick, T. (1999): Market Power of Skilled Workers Causes
+Unemployment -- So What?, in: 
+Gijsel, P., Olthoff, R., Zwick, T. (eds.): The Unemployment Debate:
+Current Issues, Marburg
+\end{literatur}
+
+\renewcommand{\cite}[1]{\nocite{#1}}
+\cite{Banks:93}\cite{Burkhauser:94}
+\cite{Deaton:89}\cite{Jenkins:94}\cite{Schluter:95}\cite{Schluter:96a}
+\cite{Schluter:96b}\cite{Schluter:96c}\cite{Schluter:96d}
+\cite{Silverman:81}\cite{Silverman:86}
+	
+\bigskip\noindent
+Ein Beispiel für ein Literaturverzeichnis mit \emph{apametro}:
+\bibliographystyle{apametro}
+%\captionsgerman sorgt für deutschsprachige Abschnittsüberschrift 
+%trotz englischer Trennungen:
+\engl\captionsgerman
+\bibliography{beispiel}
+\ger
+
+\end{document}

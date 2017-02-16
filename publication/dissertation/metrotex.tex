@@ -1,0 +1,151 @@
+\documentclass[12ptt,fleqn]{metrobk}
+
+%TODO Zuerst ein paar Einstellungen vornehmen:
+%Folgende Zeile aktiviert T1-Codierung (mit Postscript- oder ec/dc-Schriften)
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+%TODO Zur Verwendung von Postscriptschriften:
+\usepackage{lmodern}
+%\usepackage{courierv}
+%\usepackage{mathbeg}
+\usepackage[dvips]{epsfig}
+\usepackage{shortvrb}
+\usepackage{array}
+
+%TODO Alternativ können Sie babel verwenden:
+%\usepackage{german}
+\usepackage[german]{babel}
+%\usepackage{apametro}
+
+%TODO apametro/mharvard Zitationsstil
+%\usepackage{metrocite}
+\usepackage{mharvard}
+
+%TODO MY PACKAGES
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{esint}
+\usepackage{graphicx}
+\usepackage{ziffer}
+\usepackage{wrapfig}
+
+%TODO BIRGITS PACKAGES
+\usepackage{floatrow}
+\usepackage{acronym}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+\usepackage[normalem]{ulem}
+\usepackage{psfrag}
+\usepackage{enumerate}
+\usepackage{pifont}
+\usepackage{bibentry}
+\usepackage{pstricks}
+\usepackage{marvosym}
+\usepackage{rotating}
+\usepackage{paralist} 
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage{verbatim}
+\usepackage{fancybox}
+\usepackage{paralist}
+\usepackage{makeidx} 
+\usepackage[intoc]{nomencl}
+\usepackage[percent]{overpic}
+\usepackage{enumitem}
+
+%DISSERTATIONSINFORMATIONEN
+\title{Endogenes Wachstum und Internationaler Handel}
+%Your thesis title, this is used in the title and abstract
+\subtitle{Die Wirkung von Außenhandelseffekten auf den technischen Fortschritt}
+%Untertitle der Arbeit
+\newcommand{\supname}{\emph{Prof. Dr. rer. pol. Susanne Soretz}}
+%Your supervisor's name, print it elsewhere with \supname
+\newcommand{\examname}{\emph{Prof. Dr. rer. pol. Armin Rohde}}
+%Your examiner's name,print it elsewhere with \examname
+\newcommand{\degree}{\emph{Doktor rerum politicarum}}
+%Your degree name,print it elsewhere with \degreename
+\author{Birgit Kirschbaum}
+%Your name,print it elsewhere with \authorname
+\newcommand{\addressname}{\emph{}}
+%Your address,print it elsewhere with \addressname
+\newcommand{\subject}{\emph{Bereich der Wirtschaftswissenschaften}}
+%Your subject area,print it elsewhere with \subjectname
+\newcommand{\univname}{\href{https://www.uni-greifswald.de/}{Erst-Moritz-Arndt Universität Greifswald}}
+%Your university's name and URL,print it elsewhere with \univname
+\newcommand{\deptname}{\href{https://rsf.uni-greifswald.de/en/lehrstuehle/wiwi/avwl/}{Allgemeine Volkswirtschaftslehre}}
+%Your department's name and URL, print it elsewhere with \deptname
+\newcommand{\groupname}{\href{https://rsf.uni-greifswald.de/en/lehrstuehle/wiwi/avwl/lehrstuhl-soretz/}{Lehrstuhl für AVWL sowie Wachstum, Strukturwandel und Handel}}
+%Your research group's name and URL, print it elsewhere with \groupname
+\newcommand{\facname}{\href{https://rsf.uni-greifswald.de/en/}{Rechts- und Staatswissenschaftliche Fakultät}}
+%Your faculty's name and URL, print it elsewhere with \facname
+
+%TODO Metropolis-Infos
+\Reihe{Dissertation zur Erlangung des akademischen Grades eines \degree}
+\Band{}
+\ISBN{1-11111-111-1}
+\Jahr{2016}
+\Druck{Metropolis, Marburg}
+
+%Einige häufige Trennfehler (bzw. unschöne Trennungen):
+\hyphenation{eine einer eines weder wegen hatte alle aller lege legen
+	quote Ihres Ihren Ihrem Ihre Times Wachs-tum Wachs-tums-rate
+	Wachs-tums-raten Wirt-schafts-wachs-tum Wirt-schafts-wachs-tums
+	docu-ment-class metro-art metro-bk Post-script Post-script-schrift
+	Post-script-schrif-ten Dateien Klas-sen-dateien Mo-no-gra-phien 
+	Sei-ten-um-bruch Sei-ten-um-brü-che}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\begin{document}
+
+\makefulltitle
+
+%keine Kopf/Fußzeilen und Seitenummmern
+\frontmatter
+%TODO TOCTOCTOC FOR EVERYTHING
+\tableofcontents % Prints the main table of contents
+\listoffigures % Prints the list of figures
+\listoftables % Prints the list of tables
+
+%TODO INSERT ABBREVIATIONS
+\chapter*{Abkürzungsverzeichnis}
+\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\begin{acronym}[WTG] %statt WTG ->längester abkürzung damit einzug nach längster abkürzung ausgerichtet
+	\acro{BIP}{Bruttoinlandsprodukt}
+	\acro{bzw.}{beziehungsweise}
+	\acro{FAO}{Food and Agriculture Organization of the United Nations}
+	\acro{GG}{Gleichgewicht}
+	\acro{GM}{General Motors Company}
+	\acro{IWF}{Internationaler Währungsfonds}
+	\acro{LTG}{lokale Technologiegrenze}
+	\acro{UNO}{United Nations Organization}
+	\acro{USA}{Vereinigte Staaten von Amerika}
+	\acro{VW}{Volkswirtschaft}
+	\acro{WTG}{Welttechnologiegrenze}
+	\acro{WTO}{World Trade Organization} 
+	\acro{z.B.}{zum Beispiel}
+\end{acronym}
+
+\mainmatter
+% Include the chapters of the thesis as separate files from the content folder
+% Uncomment the lines as you write the chapters
+\include{content/einleitung}
+\include{content/kapitel2}
+\input{content/growth}
+%\include{content/Kapitel3}
+%\include{content/Konvergenz}
+%\include{content/Entwicklungsstrategien}
+%\include{content/Papier1}
+%\include{content/Papier2}
+%\include{content/Auswertung}
+
+%TODO BIB
+\bibliographystyle{mharvard}
+%\bibliographystyle{apametro}
+\bibliography{bib/literature.bib}
+
+\end{document}

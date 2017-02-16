@@ -1,0 +1,155 @@
+%%
+%% This is file `mtj12t.clo',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% metropol.dtx  (with options: `jog,12ptt')
+%% 
+%% Diese Datei wurde aus dem Makropaket metropol.dtx erzeugt. Sie ist Teil
+%% des Makropaketes fuer Autorinnen und Autoren des Metropolis-Verlages.
+%% 
+%% Copyright 1998-2004 Metropolis-Verlag, Marburg
+%% Alle Rechte vorbehalten
+%% 
+%% Metropolis-Verlag
+%% Bahnhofstr. 16a
+%% 35037 Marburg/Lahn
+%% 
+%% Tel: 06421/67377    Fax: 06421/681918
+%% 
+%% http://www.metropolis-verlag.de
+%% 
+%% LaTeX-Support fuer Autorinnen und Autoren des Metropolis-Verlages:
+%% Soenke Schippmann, tjosso.net, Bremen
+%% E-Mail: schippmann@tjosso.net
+%% Tel.: 0421/52079433
+%% 
+%% Diese Datei gehoert nicht zum LaTeX-Standard-Paket. Fehlerbeschrei-
+%% bungen, Probleme bei der Verwendung etc. erbitten wir an unsere oben
+%% genannte Adresse.
+%% 
+%% In dieser Datei werden Teile der Datei classes.dtx des LaTeX2e-Stan-
+%% dard-Pakets verwendet. Die Datei classes.dtx wurde vom LaTeX3-Projekt
+%% (Leslie Lamport, Johannes Braams, David Carlisle, Alan Jeffrey, Frank
+%% Mittelbach, Chris Rowley und Rainer Schoepf) erstellt. Das LaTeX2e-
+%% Makropaket mit der Originalversion der Datei classes.dtx wird
+%% AutorInnen des Metropolis-Verlages auf Anfrage kostenlos vom Metro-
+%% polis-Verlag bereitgestellt.
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+\ProvidesFile{mtjog12t.clo}
+              [2004/05/10 v2.0
+      Groessen-Option 12pt (TeX-Groessen) fuer Jahrbuch
+]
+\renewcommand\normalsize{%
+   \@setfontsize\normalsize\@xiipt{15.5}%
+   \topsep 6\p@ \@plus2\p@ \@minus2\p@%
+   \abovedisplayskip 10\p@ \@plus2\p@ \@minus2\p@
+   \abovedisplayshortskip 8\p@ \@plus4\p@ \@minus2\p@
+   \belowdisplayshortskip \abovedisplayskip
+   \belowdisplayskip \abovedisplayskip
+   \let\@listi\@listI}
+\normalsize
+\renewcommand\small{%
+   \@setfontsize\small\@xipt{14}%
+   \topsep 6\p@ \@plus2\p@ \@minus1\p@%
+   \abovedisplayskip 8\p@ \@plus2\p@ \@minus2\p@
+   \abovedisplayshortskip 6\p@ \@plus2\p@ \@minus1\p@
+   \belowdisplayshortskip \abovedisplayskip
+   \belowdisplayskip \abovedisplayskip
+   \def\@listi{\leftmargin\leftmargini
+               \labelwidth\leftmargini
+               \advance\labelwidth-\labelsep
+               \topsep 6\p@ \@plus2\p@ \@minus1\p@
+               \parsep \z@
+               \itemsep 2\p@ \@plus\p@ \@minus\z@}%
+}
+\let\litsize\small
+\renewcommand\footnotesize{%
+   \@setfontsize\footnotesize\@xpt{13}%
+   \topsep 6\p@ \@plus2\p@ \@minus1\p@%
+   \abovedisplayskip 8\p@ \@plus2\p@ \@minus2\p@
+   \abovedisplayshortskip 6\p@ \@plus2\p@ \@minus1\p@
+   \belowdisplayshortskip \abovedisplayskip
+   \belowdisplayskip \abovedisplayskip
+   \def\@listi{\leftmargin\leftmargini
+               \labelwidth\leftmargini
+               \advance\labelwidth-\labelsep
+               \topsep 6\p@ \@plus2\p@ \@minus\p@
+               \parsep \z@
+               \itemsep 2\p@ \@plus\p@ \@minus\z@}%
+}
+\renewcommand\scriptsize{\@setfontsize\scriptsize\@xpt{12.5}}%
+\renewcommand\tiny{\@setfontsize\tiny\@ixpt\@xipt}
+\renewcommand\large{\@setfontsize\large\@xivpt{18}}
+\renewcommand\Large{\@setfontsize\Large\@xviipt{21}}
+\renewcommand\LARGE{\@setfontsize\LARGE\@xxpt{25}}
+\renewcommand\huge{\@setfontsize\huge\@xxvpt{33}}
+\let\Huge=\huge
+\setlength\parskip{0\p@}
+\setlength\parindent{0.5cm}
+\setlength\smallskipamount{4\p@ \@plus 1\p@ \@minus 1\p@}
+\setlength\medskipamount{8\p@ \@plus 2\p@ \@minus 2\p@}
+\setlength\bigskipamount{15.5\p@ \@plus 3\p@ \@minus 3\p@}
+
+\setlength\headheight{12pt}
+\setlength\topskip   {12pt}
+\setlength\maxdepth{.5\topskip}
+\setlength\footnotesep{10.4\p@}
+\setlength{\skip\footins}{15.5\p@ \@plus 32\p@ \@minus \z@}
+\setlength\floatsep    {24\p@ \@plus 6\p@ \@minus 3\p@}
+\setlength\textfloatsep{24\p@ \@plus 6\p@ \@minus 3\p@}
+\setlength\intextsep   {24\p@ \@plus 6\p@ \@minus 3\p@}
+\setlength\@fptop{\z@}
+\setlength\@fpsep{24\p@ \@plus 6\p@ \@minus 6\p@}
+\setlength\@fpbot{0\p@ \@plus 1fil}
+
+
+\setlength\partopsep{\z@}
+\def\@listi{\leftmargin\leftmargini
+     \labelwidth\leftmargini
+     \advance\labelwidth-\labelsep
+     \parsep \z@
+     \topsep 6\p@ \@plus2\p@   \@minus1\p@
+     \itemsep 6\p@  \@plus1\p@ \@minus1\p@}
+\let\@listI\@listi
+\@listi
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep    6\p@   \@plus1\p@ \@minus\p@
+              \parsep    \z@
+              \itemsep 4\p@  \@plus0.5\p@ \@minus0.5\p@}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    3\p@   \@plus1\p@ \@minus\p@
+              \parsep    \z@
+              \itemsep 1\p@  \@plus\z@ \@minus\z@}
+\def\@listiv {\leftmargin\leftmarginiv
+              \labelwidth\leftmarginiv
+              \advance\labelwidth-\labelsep}
+\def\@listv  {\leftmargin\leftmarginv
+              \labelwidth\leftmarginv
+              \advance\labelwidth-\labelsep}
+\def\@listvi {\leftmargin\leftmarginvi
+              \labelwidth\leftmarginvi
+              \advance\labelwidth-\labelsep}
+
+\endinput
+%%
+%% End of file `mtj12t.clo'.
