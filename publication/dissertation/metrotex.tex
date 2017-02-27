@@ -90,22 +90,16 @@
 \Jahr{2016}
 \Druck{Metropolis, Marburg}
 
-%Einige häufige Trennfehler (bzw. unschöne Trennungen):
-%\hyphenation{eine einer eines weder wegen hatte alle aller lege legen
-%	quote Ihres Ihren Ihrem Ihre Times Wachs-tum Wachs-tums-rate
-%	Wachs-tums-raten Wirt-schafts-wachs-tum Wirt-schafts-wachs-tums
-%	docu-ment-class metro-art metro-bk Post-script Post-script-schrift
-%	Post-script-schrif-ten Dateien Klas-sen-dateien Mo-no-gra-phien 
-%	Sei-ten-um-bruch Sei-ten-um-brü-che}
-
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
 \begin{document}
 
 \makefulltitle
-
 %keine Kopf/Fußzeilen und Seitenummmern
 \frontmatter
+% Danksagung
+\include{content/danksagung}
+
 %TODO TOCTOCTOC FOR EVERYTHING
 \tableofcontents % Prints the main table of contents
 \listoffigures % Prints the list of figures
@@ -137,13 +131,26 @@
 \include{content/kapitel2}
 \include{content/growth}
 \include{content/kapitel3}
-%\include{content/konvergenz}
+\include{content/konvergenz}
 \include{content/entwicklungsstrategien}
 \include{content/papier_1}
-%\include{content/Papier2}
-%\include{content/Auswertung}
+\include{content/papier_2}
+\include{content/auswertung}
+%\include{content/rest}
 
-%TODO BIB
+% Appendix
+\backmatter
+\include{content/math_append2}
+\include{content/math_append}
+\include{content/math_append-ezhandel}
+\chapter{Mathematische Tabellen}
+\vspace{-1.5cm}
+\input{content/variablenverzeichnisp2}
+\input{content/parameterverzeichnis}%
+\input{content/variablenverzeichnisp1}
+\input{content/parameterverzeichnis2}
+
+%TODO Bib
 \bibliographystyle{mharvard}
 %\bibliographystyle{apametro}
 \bibliography{bib/literature.bib}
