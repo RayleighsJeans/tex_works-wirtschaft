@@ -1,0 +1,334 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[latin1]{inputenc}% erm\"oglich die direkte Eingabe der Umlaute 
+\usepackage[T1]{fontenc} % das Trennen der Umlaute
+\usepackage[USenglish]{babel}
+
+\usepackage[fleqn]{amsmath}
+%\usepackage{amstext,amssymb}
+\usepackage{newtxtext, newtxmath}
+\usepackage{charter}
+
+
+
+\usepackage{epsfig,graphicx,psfrag,pstricks,marvosym,pifont}
+\usepackage[hang]{subfigure}
+\usepackage{booktabs,multirow}
+\usepackage{natbib}
+%\usepackage{showkeys}
+\usepackage{bibgerm}
+
+
+\def\figpath{figures}
+
+\begin{document}
+
+
+\begin{titlepage}
+
+\title{Structural Change, Discrimination and Female Labor Force Participation}
+\author{Marie Scheitor  \\
+	University of Greifswald 
+	\thanks{marie.scheitor@uni-greifswald.de,  Friedrich-Loeffler-Str. 70, D-17489 Greifswald, \newline \hspace*{0.6cm} 0049-3834-4202496.}}
+
+\date{\today}
+
+\end{titlepage}
+
+\maketitle
+
+
+\begin{abstract}
+Economic development of industrialized economies is characterized by structural transition towards service economy and rising female employment, especially in the service sector. This paper highlights how macroeconomic mechanisms explain increasing female labor supply. While structural change generates rising participation of women in the labor market, statistical discrimination in female wages has the opposite effect. A multisector model of growth is constructed, which includes two economic sectors and a home production technology. Qualitative results of the model emphasize different sectoral productivity growth as driving force of female labor supply. Additionally statistical discrimination of women in the labor market explains why the classical role allocation of men and women in household activities persists.  
+\end{abstract}
+
+\vfill 
+\noindent Keywords: Female Labor Supply, Structural Change, Home Production, Statistical \newline \hspace*{1.85cm} Discrimination\\
+
+
+\noindent JEL: D13, E24, H31, J22, O11, O41
+
+\thispagestyle{empty} \setcounter{page}{0}
+\newpage
+
+\section{Introduction}
+
+Structural change is a striking feature throughout economic development, meaning that with increasing income the economy initially shifts away from agriculture to industry and later on to services \citep{Kuznets:1973}. According to \citet{{Fuchs:1980},{Kongsamut:2001},{Ngai:2007}} this paper concentrates on structural change as the reallocation of labor across the three main economic sectors agriculture, industry and services. \citet{Swieckie:2017} summarizes two classical sources of structural change. On the one hand sector-biased technological progress leads to a shift of activities among sectors. If there is relatively little technological progress in the service sector compared to other sectors and if services and the other consumption goods are poor substitutes, there is a reallocation of economic activities towards the sectors with low productivity growth. On the other hand nonhomothetic preferences leads to a shift of households expenditures away from consumption goods produces in the agricultural sector towards services if income increases.\\
+In this paper both mechanisms are implemented in order to analyze the household's labor supply decision. Following \citet{Akbulut:11}, nonhomotheticities in preferences and sector-biased growth in labor productivity explain the reallocation of economic activities from agricultural and industrial sector to the service sector if income increases. Related to \citet{{Ngai:2007},{Rogerson:2008}}, differences in sectoral labor productivities result in so called marketization of home production, meaning a movement of resources from home production into market production. For example, if productivity growth of market produced services is high relative to home produced services, activities are reallocated to the market, if home- and market produced services are highly substitutable. Because services have relatively good home produced substitutes compared to goods of the other main sectors, marketization is in favor of services.\\
+Since the second half of the 20th century not only structural transition from industry towards service economies is observed but also the economic role of women changed. \footnote{Like \citet{Iscan:2010} the concept of service economy abstracts from is occupational structure of employment. Even though female employment is often connected to occupational choices this paper concentrates on the industrial structure of employment.} There are several approaches that explain why more and more women enter the labor market. For example, \citet{Olivetti:2009}  highlight the introduction of infant formula and medical progress in general as support for female labor force participation. Quite close to this approach is the  rising provision of oral contraceptives, which facilitates female career management \citep{GoldinKatz2002}.\\
+Next to medical improvements technological progress in form of affordable consumer durable goods (e.g. washing machines) enabled women to spent less time in household production and reallocate time to the labor market \citep{Greenwood:2005}. \citet{Jones:2003} find that the narrowing of the gender gap is connected to an increase in average hours worked by married women. On the contrary, technological progress in household production technology has only a small effect on female labor supply.
+\citet{Galor:1996} emphasize that general technological progress stimulates capital per worker, which again complements that kind of labor in which women have a comparative advantage. As a consequence female relative wages and female labor supply are rising. Rising relative wages are often used to explain increase women's labor supply. \citet{Siegel:2017} argues that with decreasing gender wage gap, relative wages become more equal. Therewith time allocations of men and women between market work and home production becomes more equal as well. Next to the decline of the gender wage gap \citet{Attanasio:2008} explain rising female labor force by a reduction of childcare costs relative to life-time earnings.\\
+An alternative approach is based on the work of \citet{Akbulut:11}, who developed a time allocation model to reconstruct relationship between structural changes and female employment in the United States. The economy is simplified to two sectors, goods and services, and home production. Services are assumed to be either produced in the market or at home, so that home production means the production of non-market services. Differences in relative changes in productivity growth among services and home activities result in increasing female labor supply if market and non-market services are highly substitutable and the service sector is more productive. \citet{Ngai:2008} use this so called marketization mechanism to reconstruct the shift from home production to agriculture and manufacturing in early stages of structural transition, as well as the employment shift from agriculture and manufacturing to services. Comparatively, marketization is possible from home production towards the service sector. \footnote{Earlier approaches like \citet{Fuchs:1980} argue that increasing employment in the service sector is also generated by rising female labor force participation. If the female spouse is working in the labor market the households expenditures on services are relatively higher.}\\
+Most approaches deliver explanations for increasing employment of women. This paper concentrates on the question why, despite all achievements, female participation has not caught up to male participation in the labor market. Therefore, I adopt the model of \citet{Akbulut:11} and implement taxes and statistical discrimination. Both are assumed to be forces which reduce incentives to engage in the labor market. Adaptions are made to cope with gender-specific labor supply as well as the German labor market. \citet{Rogerson:2008} argues that relatively high income taxation in European countries like Germany explain a slow-going structural change compared to the United States.  Statistical discrimination here means that employers discriminate in wage against the specific group of women because they expect lower productivity \citep{Phelps:1972}.\\
+While Akbulut's work concentrates on the second half of the 20th century, my analysis focus on the time after German reunification in 1990. Since then role allocation of men and women concerning home production changed \citep{{Knowles:2013},{Siegel:2017}}. Also \citet{Ramey:2008} finds empirical evidence from the United States that time allocated to home production converges between men and women. Especially time which men in working age spent with household activities increased by 13 hours from 1900 to 2005. In order to cover this development male time allocation restrictions are loosened in favor of household activities.\\
+The outline of the paper is organized as follows. In section 2 data concerning the German labor market is documented. Section 3 outlines a model of structural change and discrimination. In section 4 qualitative results of the model are presented. Finally, section 5 concludes the paper. 
+
+\section{Data Analysis}
+
+\begin{figure}[h]
+\begin{center}
+\epsfig{figure=\figpath/GVA.EPS,width=0.9\textwidth}
+\caption{\label{GVA} Sectoral Shares of Gross Value Added (GVA, constant 2010)}
+\end{center}
+\end{figure}
+
+Since the reunification of East and West Germany in 1990 structural changes in Germany are characterized by a growing service sector. The economic development from 1991 to 2015 is displayed by changes in sectoral shares of GDP and employment. In order to show the changing role of female labor force participation, data concerning employment is not only specified by sector but also by gender. Rising female labor force participation in services is the main focus of this paper. The other two sectors, agriculture and industry, are decreasing in female employment during the respective period. Thus, for simplicity, agriculture and industry are merged to one sector, namely the goods sector and put in contrast to the second sector of services.
+
+\begin{figure}[h]
+\begin{center}
+\epsfig{figure=\figpath/SectorEmpl.EPS,width=0.9\textwidth}
+\caption{\label{SecEmpl} Sectoral Shares in Total Employment}
+\end{center}
+\end{figure}
+
+
+In this paper changes in sectoral share of economic performance in Germany are displayed by Gross Value Added (GVA), which is linked as a measurement to GDP.\footnote{GDP is calculated by GVA plus taxes less subsidies on products. Generally, GDP and GVA follow a similar trend.} All shares presented in figure \ref{GVA} are in constant 2010 prices and taken from German National Accounts provided by the German Federal Statistical Office (Destatis).\footnote{Constant 2010 prices are calculated by Chain Index. The goods sector includes agriculture, forestry and fishing, industry, including manufacturing, and construction. The service sectors includes trade, transport, accommodation and food services, information and communication, financial and insurance services, real estate activities, business services, public services, education, health, and other services.} From 1991 to 2014 the share of services increased from 64,62\% to 68,71\%, which is an annual average growth rate of 0,26\%. At the same time the share of goods decreased by 16,76\%, which is an annual average growth rate of minus 0,76\%.
+
+\begin{figure}[h]
+\begin{center}
+\epsfig{figure=\figpath/EmplGen.EPS,width=0.9\textwidth}
+\caption{\label{EmplGen} Sectoral Shares in total employment}
+\end{center}
+\end{figure}
+
+
+Data concerning sectoral employment shares presented in figure \ref{SecEmpl} are also taken from German National Accounts. The employment share of services increased from 61,25\% in 1991 to 74,09\% in 2015, while the employment share of goods decreased from 38,75\% to 25,91\%. The annual average growth rate are 0,80\% and minus 1,66\%, respectively. Obviously, the development of sectoral shares in economic performance and employment is conjoint. In both measurement categories the increase in the service sector is conducted by a decline in the goods sector.
+
+
+\begin{figure}[h]
+\begin{center}
+\epsfig{figure=\figpath/Strukturwandel.EPS,width=0.9\textwidth}
+\caption{\label{fracture}Gender-specific distribution across goods and service sector}
+\end{center}
+\end{figure}
+
+Figure \ref{EmplGen} summarizes changes in gender-specific employment. The data is taken from German Microcensus, which are also provided by Destatis. Total population here means working age population, which is defined from 15 to less than 65 years of age. Within 24 years the male employment rate remained relatively stable and decreased slightly from 78,40\% to 77,68\%. On average, this is a decrease of 0,04\% every year. Meanwhile the female wage rate increased by 22,46\%, which is an annual average growth rate of 0,85\%. In 1991 57,01\% of the women were employed and until 2015 the share grew up to 69,81\%. In total the employment rate increased by 8,79\%. To some extend this development can be explained by the narrowing of the gender employment gap.
+
+
+
+
+Lastly, figure \ref{fracture} shows how gender-specific employment is distributed across the two economic sectors. The data is extracted from the World Banks database World Development Indicators.\footnote{The employment to population ratio by gender are modeled ILO estimates, where population is again defined as working age population.} Employment rates of both men and women are increasing in the service sector and decreasing in the goods sector. The share of women is relatively low and since 2005 relatively steady with an employment rate of about 8\%. Likewise stays the males employment rate at the level of about 26\% since that time. During the entire time period the employment rate of men increased from 30,38\% to 36,29\%, which is an annual average growth rate of 0,78\%. In comparison was the respective average growth rate of women with 1,43\% per year almost twice as high. Including the fact that the female employment rate in services was always above the male's one, this development is a strong indicator that the rise of the service sector is one of the driving forces behind increasing female labor force participation. 
+
+\newpage
+%Finally statistical discrimination and productivity changes as key driver for female labor force participation.
+
+\section{Model}
+
+The model here is about gender-specific time allocation and based on the work of \citet{Akbulut:11}. Therefore, a representative household consists of two members, male and female. Both members allocate their productive time across two market sectors, goods (agriculture and industry) and services, and home production of services. In contrast to Akbulut's model, men and women can both spend their time in home production. This modification is due to increasing time that men devote to home production \citep{Ramey:2008}.
+In addition, the model is extended by gender-specific wage discrimination and income taxation in order to match specifications of the German labor market.\footnote{\citet{Rogerson:2008} explored that differences in income taxation explain differences in structural change between the United States and European countries like Germany.}
+
+\subsection{Preferences}
+
+Preferences of the male and female are united to total preferences of a representative household, which
+lives for an infinite time horizon. In each period $t$ the household derives utility $U$ from aggregated consumption $C_t$ and leisure $L_t$, so that preferences are 
+
+\begin{equation}
+\label{Usum}
+U=\sum_{t=0}^\infty \beta^t U(C_t, L_t), \qquad \beta \in (0,1).
+ \end{equation} 
+
+The parameter labeled $\beta $ is the discount factor, meaning that the household values consumption in prior periods higher than in subsequent periods. The utility function of period $t$ is given by
+ 
+\begin{equation}
+\label{U}
+U(C_t, L_t)=\alpha_C \log C_t +  (1-\alpha_C) \log L_t, \qquad \alpha_C \in (0,1),
+ \end{equation} 
+
+where $\alpha_C$ denotes to the weight of consumption and $(1-\alpha_C)$ to the weight of leisure. Consumption of the household is a composite good of industrial (and agricultural) goods $G_t$  and services $S_t$. Services again are produced in the market sector $S_{Mt}$ and at home  $S_{Nt}$ (non-market services). Both aggregators for $C$ and $S$ are constant elasticity of substitution functions:
+\begin{equation}
+\label{C} 
+C(G_t,S_t)=(\alpha_G (G_t - \overline{G})^\epsilon + (1-\alpha_G) S_t  ^\epsilon)^{1/\epsilon}, \qquad \alpha_G \in (0,1), \text{and}
+\end{equation}
+
+\begin{equation}
+\label{S} 
+S(S_{Mt}, S_{Nt})=(\alpha_S {S_{Mt}}^\eta + (1-\alpha_S) {S_{Nt}}^\eta )^{1/\eta}, \qquad \alpha_S \in (0,1).
+\end{equation}
+
+The parameters $\alpha_G$ and $\alpha_S$ are the weights of consumption of industrial goods and market services, respectively. $\overline{G}$ represents the subsistence level of the household, thus the minimum of industrial goods the households consumes in each period. The elasticity of substitution between industrial goods and services is described by $\frac{1}{1-\epsilon}$. With $\epsilon <0 $ industrial goods and services rather complement than substitute each other. $\frac{1}{1-\eta}$ is the elasticity of substitution between market and non-market services. With $0<\eta <1$, market and non-market services are assumed as highly substitutable. As long as both elasticities of substitution are not unity, preferences are non-homothetic. This implies that uneven productivity growth among sectors results in structural change and thus a reallocation of economic activities of the representative household. For example, if the increase in productivity is higher in the sector of market services compared to non-market services, there is a shift from home production to the market \citep{{Ngai:2007},{Ngai:2008}}.\\
+
+The households aggregated leisure is a simple function of Cobb-Douglas type:
+
+\begin{equation}
+\label{L} 
+L(L_{mt}, L_{ft})={L_{mt}}^{\alpha_L} {L_{ft}}^{1-\alpha_L}, \qquad \alpha_L \in (0,1),
+\end{equation}
+
+where $L_{mt}$ is male's leisure and $L_{ft}$ female's leisure. The parameter labeled $\alpha_L$ represents the share of male's leisure in respective to the total amount of time the household spends with leisure. 
+
+\subsection{Time restrictions}
+
+The main assumption in this model of time allocation is that each household member is endowed with one unit of time, which can be spend for productive activities and leisure. Productive activities can be performed in the market sectors for goods and services, and home production of services. Though each household member can work in more than one sector. This helps to translate the time allocation decision of the representative household, which is on the intensive margin, to the extensive margin decision, whether to work.\footnote{In the data section changes at the extensive margin are expressed by employment-to-population ratios.} The household consists of two members of each gender, whose time allocation stands for the fraction of people who are employed the in different sectors (market and non-market) and the fraction of people spending their full time with leisure \citep{Akbulut:11}.\\
+A deduction from the data section is that women in this model do not work in the goods sector. The fraction of women in this sector was relatively low decreasing and lastly steady over time. This model concentrates on changes in time allocation of women due to an increasing service sector. In contrast to the model of \citet{Akbulut:11} men are not excluded from home production of services. This is due to the fact, that my model analysis a later time period than Abulut's model, in which the participation of men was relatively low. The time allocation constraint for male household member is 
+
+\begin{equation}
+\label{Hm}
+	1=  H_{mGt} + H_{mSMt} + H_{mSNt} + L_{mt},
+\end{equation}
+
+where $H_{mGt}$ is the time the male devotes to the goods sector, $H_{mSMt}$ is the time the male devotes to the sector of market services, $H_{mSNt}$ is the time the male devotes to home production of services, and $L_{mt}$ is the male's leisure. The time allocation constraint of the representative female is given by
+
+\begin{equation}\label{Hf}
+	1=  H_{fSMt} + H_{fSNt} +L_{ft},
+\end{equation}
+
+where $H_{fSMt}$ is the time the female devotes the production of market services, $H_{fSNt}$ is the time the female devotes to production of non-market services, and $L_{ft}$ is the female's leisure.
+
+\subsection{Production Technologies}
+
+Assuming labor as the only input factor, production technologies are linear in labor. Production technologies for the three sectors (market and non-market) take the following forms:
+\begin{equation}
+\label{AG}
+G_t =  A_{Gt} H_{mGt},
+\end{equation}
+
+\begin{equation}
+\label{ASM}
+S_{Mt} =  A_{SMt}(H_{mSMt}+ (1- \delta)H_{fSMt}), \qquad \text{and}
+\end{equation}
+
+\begin{equation}\label{ASN}
+S_{Nt} =  A_{SNt}(H_{mSNt}+ H_{fSNt}),
+\end{equation}
+
+where $A_{Gt}$, $A_{SMt}$, and $A_{SNt}$ specify productivity parameters for goods, services, and home production of services, respectively. Because the model abstracts from capital, each of these parameters represent sector-specific labor productivity. All productivity parameters are exogenous; meaning that a change in reallocation of resources will not change the productivity of a particular economic sector. This paper aims to explain how uneven technological change in productivity results in a shift of resources among market sectors and home production.\\
+Again, an assumption is that only men work in the goods sector, but production of market services and non-market services is not restricted by gender. 
+The parameter $\delta$ reflects the discriminatory wage differential coming from statistical discrimination. According to \citet{Phelps:1972} employers discriminate specific groups because they expect lower productivity and therefore value information costs about individual applicants or employees as relatively high.\\
+Statistical discrimination does not contradict neoclassical assumption concerning profit maximization of the firm or competitive markets. Although this kind of discrimination should disappear due to competitive forces, the firm still faces the problem of asymmetric information about future preferences of female labor supply (e.g. maternity leave) leading to  a persisting gender gap \citep{BlauKahn:2016}.
+
+\subsection{Government}
+
+In the model governmental interference in the economy is kept simple. Taxes are only on productive market activities. This implies that income from labor in the market sectors are taxed but not household production. Following \citep{Rogerson:2008} and afore \citep {Prescott:2004} there is a proportional tax rate $\tau$ on labor income and lump-sum transfer $T$ to the representative household. The government budget constraint takes the following form:
+
+\begin{equation}
+\label{T} T = \tau (w_{mGt} H_{mGt} + w_{mSMt} H_{mSMt}+ w_{fSMt} H_{fSMt}), 
+\end{equation}
+
+where $T$ represents governmental spending, which is assumed to be fully returned to the households as transfer to household consumption. The other side of the equation represents tax revenues from labor income of the households, where $w_{mi}$ is the male's wage rate in goods and service sector, respectively. Note that female's wage rate in the service sector $w_{fSMt}$ in service sector differs from male's wage rate because of statistical discrimination.
+
+\subsection{Equilibrium}
+
+The equilibrium in this economy is competitive. Resources in each period $t$ will be allocated so that firms maximize their profits, the representative household maximizes it's utility and all market are clear. Firms are either in the good or service sector. Profit maximization of a representative firm in the goods sector is
+\begin{equation}
+\label{PG}
+\max\Pi_{Gt} = P_{Gt} G_t - w_{Gt} H_{mGt},
+\end{equation}
+
+where $P_{Gt}$ is the price of goods and $w_{Gt}$ is the wage of men working in the goods sector. In the service sector both men and women are employed. Firms are assumed to expect lower productivity of women and hence discriminate in wage for profit maximization:
+
+\begin{equation}
+\label{PSM}
+\max\Pi_{SMt} = P_{SMt} S_{Mt} - (w_{mSMt} H_{mSMt}+ w_{fSMt} H_{fSMt}),
+\end{equation}
+
+where $P_{SMt}$ is the price of services, $w_{mSMt}$ is the wage for men, and $w_{fSMt}$ is the wage for women in the service sector. Considering free labor mobility among sectors, equilibrium wages for men are
+
+\begin{equation}\label{wGGm}
+	 w_{Gt} = w_{mSMt} = w_{mt}.
+\end{equation}
+
+Due to the assumption that only men can work in both market sectors, $w_{mt}$ is the male's equilibrium wage rate. Profit maximization in the service sector and equation \eqref{wGGm} result in
+
+\begin{equation}\label{PA}
+P_{Gt} A_{Gt} = w_{mt} = P_{SMt} A_{SMt}, \qquad \text{and}
+\end{equation}
+
+\begin{equation}\label{wGGf}
+	w_{fSMt} = (1-\delta) w_{mt}.
+\end{equation}
+
+Thus women are paid a fraction of male's equilibrium wage, because of the lower expected productivity. The representative household faces a maximization problem with given prices, income tax rate $\tau$, and transfers to private consumption $T$. In each period to the household solves
+
+\begin{multline}
+\max U= \alpha_C \log (\alpha_G (G_t - \overline{G})^\epsilon + (1-\alpha_G)(\alpha_S {S_{Mt}}^\eta + (1-\alpha_S) {S_{Nt}}^\eta )^{\epsilon/\eta}) ^{1/\epsilon} \\ + 
+(1-\alpha_C) \log (1-  H_{mGt} - H_{mSMt} - H_{mSNt})^{\alpha_L} {(1 - H_{fSMt} - H_{fSNt})}^{1-\alpha_L},
+\label{maxU}
+\end{multline}
+
+subject to budget constraint 
+\begin{equation}
+\label{BG} 
+P_{Gt} G_t + P_{SMt} S_{Mt} = (1-\tau) (w_{mGt} H_{mGt} + w_{mSMt} H_{mSMt}+ w_{fSMt} H_{fSMt}) +T,
+\end{equation}
+
+home production technology
+
+\begin{equation}\label{HP}
+S_{Nt} \leq  A_{SNt} (H_{mSNt}+ H_{fSNt}),
+\end{equation}
+
+as well as time restrictions in \eqref{Hm} and \eqref{Hf}, and non-negativity constraints. Solving the optimization problem for the representative household can be interpretative as a social planner's problem, who decides over time allocation of the representative male and female. With all markets clear, the allocation problem for the male can be displayed with
+
+
+\begin{equation}\label{GS}
+\frac{A_{Gt}}{A_{SMt}} = \frac{S(S_{Mt}, S_{Nt})^{\epsilon-\eta} {S_{Mt}}^{\eta-1}}{(G_t - \overline{G})^{\epsilon-1}}, \qquad \text{and}
+\end{equation}
+
+\begin{equation}\label{mSMN}
+\frac{A_{SNt}}{(1-\tau) A_{SMt}} \leq \frac{\alpha_S}{(1-\alpha_S)} {\left(\frac{S_{Mt}}{S_{Nt}}\right)}^{\eta -1}.
+\end{equation}
+
+The left side of equation \eqref{GS} shows the marginal rate of transformation between production in the market sectors, goods and services. The right side shows the respective marginal rate of substitution. Since work in either of the market sectors is taxed, the male's allocation decision between goods and service sector is independent from income taxation. This is not the case for market and non-market services, where the latter is not taxed. \\
+In equation \eqref{mSMN} (tax-distorted) marginal rate of transformation between market and non-market services is equal or less than the respective marginal rate of substitution. If the income tax is relatively high, working in the service sector is less attractive compared to home production. In other words, a relatively high tax reduces the incentive to substitute non-market with market services. This also applies to the female's allocation problem between market and non-market services:
+
+\begin{equation} \label{fSMN}
+ \frac{\alpha_S}{(1-\alpha_S)} {\left(\frac{S_{Mt}}{S_{Nt}}\right)}^{\eta -1} \leq \frac{A_{SNt}}{(1-\tau)(1- \delta)A_{SMt}}.
+\end{equation} 
+
+But here, the marginal rate of transformation is equal or greater than the marginal rate of substitution. The statistical discrimination factor operates like an additional tax on female's work in the market sector and thus reduces attractiveness of substituting home production with market services. Merging \eqref{mSMN} and \eqref{fSMN}, the representative households allocation problem between market services and home production can be summarized by 
+
+\begin{equation} 
+\underbrace{\frac{A_{SNt}}{(1-\tau)A_{SMt}}}_{\substack{GRT_m}} \leq \underbrace{\frac{\alpha_S}{(1-\alpha_S)} {\left(\frac{S_{Mt}}{S_{Nt}}\right)}^{\eta -1}}_{\substack{GRS}} \leq \underbrace{\frac{A_{SNt}}{(1-\tau)(1- \delta)A_{SMt}}}_{\substack{GRT_f}}.
+\label{GRT}
+\end{equation} 
+
+During the further analysis the male's and female's marginal rate of transformation is labeled as $GRT_m$ and $GRT_f$, respectively. The marginal rate of substitution between market and non-market services is labeled as $GRS$. Applying equations \eqref{ASM} and \eqref{ASN} in the upper equation, algebraic transformation results in the relative time allocation of both gender in services and home production:
+
+\begin{equation} \label{HMHN}
+\underbrace{\frac{H_{mSNt} + H_{fSNt}}{H_{mSMt}+(1-\delta)H_{fSMt}}}_{\substack{Time\ allocation}} \leq \underbrace{{\left( (1-\tau) \frac{\alpha_S }{(1-\alpha_S)} {\left( \frac{A_{SMt}}{A_{SNt}}\right)}^{\eta} \right)}^{1/{\eta -1}}}_{\substack{Relative\ productivity}}.
+\end{equation}
+
+If the relative productivity between market and non-market services changes, there is also a shift of the households time allocation between market work and home production. Suppose that at least one of the gender-specific marginal rates of transformation equals the marginal rate of substitution, the inequality sign in equation \eqref{HMHN} dissolves. Hence, there are three possible solutions to the upper time allocation problem.\\
+In the first case $GRT_m$ equals $GRS$. Since mathematical optimization of the problem follows Kuhn-Tucker conditions, $H_{mSN}$ is greater than or equal zero. At the same time $GRT_f$ is greater than $GRS$. Thus, $H_fSM$ has to be zero. In the second case $GRT_f$ equals $GRS$ and $GRT_m$ is less than $GRS$, meaning that $H_{fSM}$ is greater than or equal zero and $H_mSN$ has to be zero, respectively. In both cases $GRT_m$ is less than $GRT_f$, which implies that there is wage discrimination against women and $\delta$ is greater than zero.\\
+The third case abstracts from discrimination. Correspondingly, $GRT_m$ equals $GRT_f$, both marginal rates of transformation equal the marginal rate of substitution, and $H_mSN$ as well as $H_{fSM}$ are greater than or equal zero. In this case the household is indifferent about the spouses' intra-sectoral time allocation.  
+
+\section{Results}
+
+The three possible solutions of the time allocation problem are summarized in table \ref{table:results}.
+
+\begin{table}[h]
+\caption{Solutions of the time allocation problem}
+\label{table:results}
+\begin{tabular}{lcccc} \hline
+ \multicolumn{5}{r}{$\arg \max (\mbox{Case 1},\mbox{Case 2},\mbox{Case 3})$}  \\ \hline \hline
+ 
+ \rule[-3mm]{0pt}{20pt}Case 1 & $0<\delta<1$ & $GRS<GRT_f$ & $H_{mSNt}>0$ & $H_{fSMt}=0$ \\ \hline %& Randl\"osung GRT_m=GRS
+ \rule[-3mm]{0pt}{20pt}Case 2 & $0<\delta<1$ & $GRT_m<GRS$ & $H_{mSNt}=0$ & $H_{fSMt}>0$ \\ \hline %& Randl\"osung GRS =GRT_f
+ \rule[-3mm]{0pt}{20pt}Case 3 & $\delta=0$ & $GRT_m=GRT_f$ & $H_{mSNt}\geq0$ & $H_{fSMt}\geq0$  \\ \hline %& Innere L\"osung GRT=GRS
+
+\end{tabular}
+
+\end{table}
+
+
+Every case has its own interpretation, which covers economic theory as well as data observation. The first and second case are corner solutions. In both cases $GRT_m$ is also less than $GRT_f$, which is due to statistical discrimination. For interpretation it is feasible that $\delta$ is relatively higher in the first case compared to the second case. Then, it is less attractive to substitute market with non-market services and both spouses devote time to home production. \footnote{In both cases $GRT_m \leq GRT_f$ applies, but in the first case applies $GRS=GRT_m$ and in the second case applies $GRS=GRT_f$. Examining equation \eqref{GRT} $\delta$ should be higher in case 1, so that all equations are satisfied.} \\
+Compared to that, substitution is more attractive in the second case. However, there is still some wage discrimination and the household is better of, if the representative male devotes his full productive time to market activities. Subsequently, the female is the only spouse who is in charge of home production. She is additionally employed in the market what displays the typical female double burden of waged work and household responsibilities. In theory, the marginal rate of substitution is higher than in the upper case, meaning that a fraction of those household responsibilities are compensated by market services. This is possible, because the typical home produced services like child care, cooking or cleaning are also provided by market services. By demanding market services instead of home production the household can achieve a higher level of utility, if both kind of services are highly substitutable.\\
+The last case deals with the idea of no discrimination in the labor market, with an interior solution and welfare theorem 1 applies. In this case, both spouses are free to allocate their time between service sector and home production. For example, increasing income taxes would reduce the incentive to work in the market sector, but wouldn't change the relative time allocated between male and female in equation \eqref{HMHN}.\\
+In all cases increasing productivity in market services relative to home production leads to a higher labor supply in the service sector. Nevertheless, an increase of female labor force participation can only be explained in cases 2 and 3, because in case 1 the value of $\delta$ is very high and women do not work at all. The lower the value of $\delta$ it is more likely that women will enter the labor market, because productivity gains in market services compared to home production pay off.\footnote{Again this is possible if market and home produced services can be easily substituted.} This indicates that a reduction of statistical discrimination of women is an additional approach to explain the rise of female employment.\\
+Next to discrimination there is another force, which distorts relative productivity between market and non-market services and thus the households time allocation. Remember that income from market labor is taxed but not home production and the gender-specific marginal rates of transformation are tax-distorted. Regarding equation \eqref{HMHN}, the higher labor in the market sector is taxed, the lower gets the relative productivity 
+and the less is the incentive to work in the service sector, because $H_{mSMt}+(1-\delta)H_{fSMt}$ decreases.\footnote{Substitution parameter $\eta$ is defined as $0<\eta <1$. Hence $1/{\eta -1}$ is negative and productivity relation shifts.} In the first case, only male labor force participation decreases with rising taxes, because $H_{fSMt}$ is zero anyway. On the other hand, both spouses will spend more time in home production to keep a certain utility level. In case 2 a higher tax rate augments the effect of discrimination and women will be even less likely to work in the labor market. In other words, wage discrimination of women appears like an additional tax on female employment compared to male employment. In case 3, there is lack of discrimination meaning that a higher income tax affects both spouses equally. Only in this last case, time allocation of men and women are not influenced by economic distortions and is then a matter of individual preferences of the household's members.\\
+
+
+
+\section{Conclusion}
+
+This paper focuses on how growth in the service sector is positively related to female labor force participation. Generally, industrialized countries underwent structural changes which are characterized by an increasing service sector as well as increasing employment, especially among the female population. Along the way most women are employed in the service sector. Despite this progress, female employment is in an inferior position to male employment. In the context of structural transition this paper highlights how statistical discrimination of women in the labor market has a depleting effect on female labor supply.\\
+A growth model is constructed which accounts for the increase in female labor supply through structural change. The driving forces here are the growing service sector alongside with increasing differences in productivity among services produced in the market and produced at home (non-market services). If non-market services like cooking, cleaning and childcare can be substituted by services supplied by the market relatively high productivity gains in the service sector compared to home production lead to shift of female labor force from household activities to the labor market. In order to analyze if there are forces which limit or enhance the effect of structural change the model is extended by statistical discrimination in female wages, income taxation of labor, and the release of home production to both spouses.\\
+This extended model is helpful to understand how statistical discrimination of women affects labor supply. Because of statistical discrimination women are assumed to be less productive in labor and thus less compensated for work than their male counterparts. Household activities are not affected by gender-specific expectations towards productivity differences. On that account, statistical discrimination distorts relative productivity between service sector and home production technology, which again influences labor supply decision of the whole household. The more women are discriminated in the labor market, the more likely the household allocates female's time into household activities and male's time to the labor market. Vice versa diminishing statistical discrimination against women in the labor market can also explain a fraction of rising female employment.\\ 
+Statistical discrimination of women in the labor market makes it difficult for both spouse to leave classical role of men and women concerning labor and home production, because productivity gains in market services are overcompensated by the arising gender pay gap. If discrimination persists but does not exceed a level at which women solely devote their time to home production, the typical female double burden of work in the labor market and in household activities arises. Indeed a fraction of those household activities can be substituted by market services without significant losses towards the households utility, but in the model all markets are assumed to be perfect. For example, costs of asymmetric information might reduce substitution possibilities between non-market with market service and thus decreases productivity gains in market services.\\
+My further research will concentrate on calibration of the model with data of the German labor market. Especially after reunification, one can observe differences in structural transition, wage discrimination and female labor force supply between East and West Germany, what might support the qualitative results of my model. In addition, quantitative results of the model are expected to facilitate measurement of home production productivity and elasticity of substitution between market and non-market services.
+
+\bibliographystyle{aer}
+\bibliography{literature}
+
+\end{document}

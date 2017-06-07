@@ -1,0 +1,183 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[latin1]{inputenc}% erm\"oglich die direkte Eingabe der Umlaute 
+\usepackage[T1]{fontenc} % das Trennen der Umlaute
+\usepackage[german,USenglish]{babel}
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amstext,amssymb}
+\usepackage{newtxtext, newtxmath}
+\usepackage{charter}
+
+\usepackage{epsfig,graphicx,psfrag,pstricks,marvosym,pifont}
+\usepackage[hang]{subfigure}
+\usepackage{booktabs,multirow}
+\usepackage{natbib}
+%\usepackage{showkeys}
+\usepackage{bibgerm}
+
+%\def\figpath{/home/soretz/doc/papers/fiscalfed/figures}
+
+\begin{document}
+
+
+\begin{titlepage}
+
+\title{Structural Change, Discrimination and Female Labor Force Participation}
+\author{Marie Scheitor  \\
+	Ernst--Moritz--Arndt University of Greifswald 
+	\thanks{Friedrich-Loeffler-Str. 70, D-17489 Greifswald, marie.scheitor@uni-greifswald.de.}}
+
+\date{\today}
+
+\end{titlepage}
+
+\maketitle
+
+
+\begin{abstract}
+Eine kurze Zusammenfassung um was es in der vorliegenden Arbeit \"uberhaupt
+so geht \ldots
+\end{abstract}
+
+\vfill Key words: 
+
+JEL:
+
+\thispagestyle{empty} \setcounter{page}{0}
+\newpage
+
+\section{Introduction}
+
+This model extends the work of \citet{Akbulut:11} by discrimination.
+And that one is very nice as well \citet{Day2016121}
+
+\section{Data Analysis}
+
+\section{Model}
+\subsection{Preferences}
+
+\begin{equation}
+\label{Usum}
+U=\sum_{t=0}^\infty \beta^t U(C_t, L_t)
+ \end{equation} 
+
+\begin{equation}
+\label{U}
+U(C_t, L_t)=\alpha_C \log C_t +  (1-\alpha_C) \log L_t
+ \end{equation} 
+
+\begin{equation}
+\label{C} 
+C(G,S)=(\alpha_G (G- \overline{G})^\epsilon + (1-\alpha_G)S^\epsilon)^{1/\epsilon}
+\end{equation}
+
+\begin{equation}
+\label{S} 
+S(S_M, S_N )=(\alpha_S {S_M}^\eta + (1-\alpha_S) {S_N}^\eta )^{1/\eta}
+\end{equation}
+
+\begin{equation}
+\label{L} 
+L(L_m, L_f)={L_m}^{\alpha_L} {L_f}^{1-\alpha_L}
+\end{equation}
+
+\subsection{Time restrictions}
+
+\begin{equation}
+\label{Hm}
+	1=  H_{mG} + H_{mS_M} + H_{mS_N} +L_m
+\end{equation}
+
+\begin{equation}\label{Hf}
+	1=  H_{fS_M} + H_{fS_N} +L_f
+\end{equation}
+
+\subsection{Production Technologies}
+\begin{equation}
+\label{AG}
+	G =  A_G H_{mG}
+\end{equation}
+
+\begin{equation}
+\label{ASM}
+S_M =  A_{S_M}( H_{mS_M}+ (1-a)H_{fS_M})
+\end{equation}
+
+\begin{equation}\label{ASN}
+S_N =  A_{S_N}( H_{mS_N}+ H_{fS_N})
+\end{equation}
+
+\subsection{Equilibrium}
+
+\paragraph{Firm's Problem}
+
+\begin{equation}
+\label{AG}
+\max\Pi_G = P_G A_G H_{mG} - w_G H_{mG}
+\end{equation}
+
+\begin{equation}
+\label{ASM}
+\max\Pi_{S_M} = P_{S_M} A_{S_M} (H_{mS_M}+ (1-a)H_{fS_M}) -  (w_{mS_M} H_{mS_M}+ w_{fS_M} H_{fS_M}) 
+\end{equation}
+\begin{equation}\label{wGGm}
+	 w_G = w_{mS_M}=w_m
+\end{equation}
+
+\begin{equation}\label{wGGf}
+	w_{fS_M} = (1-a) w_m
+\end{equation}
+
+\paragraph{Government budget constraint}
+
+\begin{equation}
+\label{T} T=\tau(w_{mG} H_{mG} + w_{mS_M} H_{mS_M}+ w_{fS_M} H_{fS_M}) 
+\end{equation}
+
+\subsection{Households Problem}
+Maximize utility
+
+\begin{multline}
+\max U= \alpha_C \log (\alpha_G (G- \overline{G})^\epsilon + (1-\alpha_G)(\alpha_S {S_M}^\eta + (1-\alpha_S) {S_N}^\eta )^{\epsilon/\eta}) ^{1/\epsilon} \\ + 
+(1-\alpha_C) \log (1-  H_{mG} - H_{mS_M} - H_{mS_N})^{\alpha_L} {(1 - H_{fS_M} - H_{fS_N})}^{1-\alpha_L} 
+\label{maxU}
+\end{multline}
+
+subject to budget constraint and home production technology
+\begin{equation}
+\label{BG} 
+P_G G + P_{S_M} S_M = (1-\tau) (w_{mG} H_{mG} + w_{mS_M} H_{mS_M}+ w_{fS_M} H_{fS_M}) +T 
+\end{equation}
+
+\begin{equation}
+S_N \leq  A_{S_N} (H_{mS_N}+ H_{fS_N})
+\label{HP}
+\end{equation}
+
+
+%Entscheidend: Verh\"altnis der geschlechtsspezifischen $GRT$ und $GRS$ zwischen Haushaltsproduktion und Dienstleistungssektor %Nennen: GRT = GRS zwischen Güter und D, unabhängig von Steuer und Diskriminierung
+\begin{equation} 
+\frac{A_{SN}}{(1-\tau)A_{SM}} \leq \frac{\alpha_S}{(1-\alpha_S)} {\left(\frac{S_M}{S_N}\right)}^{\eta -1} \leq \frac{A_{SN}}{(1-\tau)(1-a)A_{SM}}
+\label{GRT}
+\end{equation} 
+\bigskip
+
+\begin{tabular}{lcccc} \hline
+ \multicolumn{5}{r}{$\arg \max (\mbox{Fall 1},\mbox{Fall 2},\mbox{Fall 3})$}  \\ \hline \hline
+ \rule[-3mm]{0pt}{20pt}Fall 1 & $GRT_m<GRS$ & $H_{mS_N}=0$ & $H_{fS_M}>0$ & $0<a<1$ \\ \hline %& Randl\"osung GRS =GRT_f
+ \rule[-3mm]{0pt}{20pt}Fall 2 & $GRS<GRT_f$ & $H_{mS_N}>0$ & $H_{fS_M}=0$ & $0<a<1$\\ \hline %& Randl\"osung GRT_m=GRS
+ \rule[-3mm]{0pt}{20pt}Fall 3 & $GRT_m=GRT_f$ & $H_{mS_N}\geq0$ & $H_{fS_M}\geq0$ & $a=0$ \\ \hline %& Innere L\"osung GRT=GRS
+\end{tabular}
+
+\section{Calibration}
+
+\section{Results}
+
+\section{Conclusion}
+
+
+\bibliographystyle{abbrvdin}
+\bibliography{literature}
+
+\end{document}
